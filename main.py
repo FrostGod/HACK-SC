@@ -7,6 +7,8 @@ from yt_dlp import YoutubeDL
 from yt_dlp.utils import DownloadError
 import pandas as pd
 
+import kg
+
 app = FastAPI()
 
 
@@ -188,6 +190,15 @@ def header():
         if st.button("Generate!"):
             with st.spinner("Generating notes..."):
                 video_data = extract_video_data(url)
+                
+                query_str = ""
+                for subtitle in video_data["subtitles"]:
+                    query_str += subtitle["caption_text"]
+                    query_str += '\n'
+
+                # integrating with kg
+                kg.generate_knowledge_graph(query_str)
+
                 if video_data:
                     st.session_state.video_data = video_data
 
@@ -199,13 +210,20 @@ def body():
         with col1:
             video(video_data)
         with col2:
-            tab1, tab2, tab3 = st.tabs(["Transcript", "Notes", "Mindmap"])
+            tab1, tab2, tab3, tab4 = st.tabs(["Transcript", "Notes", "Mindmap", "Q&A"])
             with tab1:
                 subtitles(video_data)
             with tab2:
                 notes(MOCK_DF, MOCK_VIDEO_DATA)
             with tab3:
-                st.write("Mindmap")
+                with open('plots/pyvis_temp.html', 'r') as file:
+                    html_content = file.read()
+
+                # Display the HTML content
+                st.components.v1.html(html_content, width=800, height=600)
+                # st.write("Mindmap")
+            with tab4:
+                st.write("Q&A")
 
 
 def streamlit_app():

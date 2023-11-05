@@ -1,0 +1,2587 @@
+WEBVTT
+Kind: captions
+Language: en-CA
+
+00:00:00.033 --> 00:00:00.833
+Do you know what the result
+
+00:00:00.833 --> 00:00:02.300
+of this Python code is?
+
+00:00:02.300 --> 00:00:03.066
+Give it a shot.
+
+00:00:03.066 --> 00:00:04.900
+Pause the video and leave a comment
+
+00:00:04.900 --> 00:00:06.166
+with your answer.
+
+00:00:06.166 --> 00:00:07.333
+Now, if you had any trouble
+
+00:00:07.333 --> 00:00:08.400
+coming up with that answer,
+
+00:00:08.400 --> 00:00:10.400
+you haven't seen this syntax before.
+
+00:00:10.400 --> 00:00:12.000
+Make sure you watch this whole video
+
+00:00:12.000 --> 00:00:13.100
+where I walk you through
+
+00:00:13.100 --> 00:00:14.233
+all of the must know
+
+00:00:14.233 --> 00:00:16.266
+Python list features.
+
+00:00:16.266 --> 00:00:18.466
+Let's start by defining a list.
+
+00:00:18.466 --> 00:00:20.866
+A list in Python is an ordered collection
+
+00:00:20.866 --> 00:00:21.733
+of elements.
+
+00:00:21.733 --> 00:00:22.566
+Now we can store
+
+00:00:22.566 --> 00:00:24.033
+any elements that we want.
+
+00:00:24.033 --> 00:00:25.533
+They don't have to be the same data type.
+
+00:00:25.533 --> 00:00:26.900
+They can be different ones.
+
+00:00:26.900 --> 00:00:27.966
+In this case, I have a list
+
+00:00:27.966 --> 00:00:29.400
+that has five elements.
+
+00:00:29.400 --> 00:00:30.933
+And these are simply strings.
+
+00:00:30.933 --> 00:00:32.700
+But if I wanted to, I can mix and match
+
+00:00:32.700 --> 00:00:33.766
+and I could put true in here.
+
+00:00:33.766 --> 00:00:35.000
+I could put a number.
+
+00:00:35.000 --> 00:00:35.533
+It matter.
+
+00:00:35.533 --> 00:00:36.133
+The data types
+
+00:00:36.133 --> 00:00:37.666
+do not need to be the same.
+
+00:00:37.666 --> 00:00:38.766
+Now, lists are mutable,
+
+00:00:38.766 --> 00:00:39.966
+meaning once they're created,
+
+00:00:39.966 --> 00:00:41.066
+they can be changed.
+
+00:00:41.066 --> 00:00:42.733
+And every position in the list
+
+00:00:42.733 --> 00:00:44.566
+has something known as an index.
+
+00:00:44.566 --> 00:00:46.166
+That means that I can actually access
+
+00:00:46.166 --> 00:00:47.066
+and change
+
+00:00:47.066 --> 00:00:48.933
+what exists at each position
+
+00:00:48.933 --> 00:00:51.100
+in this list by knowing the index.
+
+00:00:51.100 --> 00:00:52.433
+Now, when we start indexing,
+
+00:00:52.433 --> 00:00:53.766
+let's just write this out here.
+
+00:00:53.766 --> 00:00:56.766
+We index at zero, and then one,
+
+00:00:56.800 --> 00:00:57.900
+and then two,
+
+00:00:57.900 --> 00:00:59.700
+and then three, and then four.
+
+00:00:59.700 --> 00:01:01.800
+So we go up by one every single time.
+
+00:01:01.800 --> 00:01:03.800
+The first index is always zero,
+
+00:01:03.800 --> 00:01:05.433
+and the last index is whatever
+
+00:01:05.433 --> 00:01:07.700
+the length of the list is, minus one.
+
+00:01:07.700 --> 00:01:08.200
+In this case,
+
+00:01:08.200 --> 00:01:09.966
+we have five elements in our list.
+
+00:01:09.966 --> 00:01:11.800
+When we subtract one, we get four.
+
+00:01:11.800 --> 00:01:13.333
+That's the last index.
+
+00:01:13.333 --> 00:01:14.766
+If we want to use the indexes,
+
+00:01:14.766 --> 00:01:16.733
+we can do something like this list here.
+
+00:01:16.733 --> 00:01:18.366
+Index zero.
+
+00:01:18.366 --> 00:01:20.400
+If I decide to print this out,
+
+00:01:20.400 --> 00:01:21.900
+that is going to access for me
+
+00:01:21.900 --> 00:01:22.833
+the first element.
+
+00:01:22.833 --> 00:01:23.800
+Let's have a look here.
+
+00:01:23.800 --> 00:01:24.966
+I got to run this again.
+
+00:01:24.966 --> 00:01:26.533
+And you see that we have a
+
+00:01:26.533 --> 00:01:28.366
+now if I put index for
+
+00:01:28.366 --> 00:01:29.700
+that will give us the last element
+
+00:01:29.700 --> 00:01:32.933
+which is element E or string E Now
+
+00:01:32.933 --> 00:01:34.633
+as well as accessing,
+
+00:01:34.633 --> 00:01:36.766
+we can modify by the index.
+
+00:01:36.766 --> 00:01:39.466
+So I said let's zero is equal to
+
+00:01:39.466 --> 00:01:41.266
+some big number like this.
+
+00:01:41.266 --> 00:01:45.133
+And then I go ahead and print list
+
+00:01:45.233 --> 00:01:46.266
+and run my code.
+
+00:01:46.266 --> 00:01:47.033
+You see that now
+
+00:01:47.033 --> 00:01:48.566
+we've actually modified the list
+
+00:01:48.566 --> 00:01:49.266
+and changed it
+
+00:01:49.266 --> 00:01:52.266
+and replaced a with this large number.
+
+00:01:52.266 --> 00:01:53.000
+Great.
+
+00:01:53.000 --> 00:01:54.733
+That's the basics on indexing
+
+00:01:54.733 --> 00:01:55.866
+now as well as indexing
+
+00:01:55.866 --> 00:01:57.100
+from the beginning of the list.
+
+00:01:57.100 --> 00:01:59.566
+We can index from the end of the list.
+
+00:01:59.566 --> 00:02:00.733
+So check this out.
+
+00:02:00.733 --> 00:02:01.700
+We actually have
+
+00:02:01.700 --> 00:02:04.300
+negative five, negative four
+
+00:02:04.400 --> 00:02:05.666
+if we can type this correctly.
+
+00:02:05.666 --> 00:02:06.600
+Negative three,
+
+00:02:06.600 --> 00:02:07.800
+negative two and negative
+
+00:02:07.800 --> 00:02:09.500
+one as valid indexes
+
+00:02:09.500 --> 00:02:11.666
+relative to the end of the list.
+
+00:02:11.666 --> 00:02:12.966
+So to grab the last element,
+
+00:02:12.966 --> 00:02:14.500
+we use negative one second
+
+00:02:14.500 --> 00:02:15.433
+last element negative
+
+00:02:15.433 --> 00:02:17.800
+two third last element, negative three,
+
+00:02:17.800 --> 00:02:19.366
+so on and so forth.
+
+00:02:19.366 --> 00:02:21.533
+So now if I were to print Ellis T
+
+00:02:21.533 --> 00:02:23.400
+at negative five,
+
+00:02:23.400 --> 00:02:26.600
+clear and run, you see that we get a
+
+00:02:26.600 --> 00:02:28.566
+because that's the fifth last element
+
+00:02:28.566 --> 00:02:30.000
+from the end of the list.
+
+00:02:30.000 --> 00:02:30.966
+Now the reason negative
+
+00:02:30.966 --> 00:02:32.200
+indexes can be useful
+
+00:02:32.200 --> 00:02:33.433
+is because in other languages
+
+00:02:33.433 --> 00:02:34.800
+where you typically have to write
+
+00:02:34.800 --> 00:02:35.866
+if you wanted to access,
+
+00:02:35.866 --> 00:02:37.800
+the last element in the list
+
+00:02:37.800 --> 00:02:39.633
+is something like LCT
+
+00:02:39.633 --> 00:02:41.366
+and then the length of the list.
+
+00:02:41.366 --> 00:02:42.566
+This is how you get in Python
+
+00:02:42.566 --> 00:02:43.500
+by the way, Len
+
+00:02:43.500 --> 00:02:44.866
+And then you surround the object,
+
+00:02:44.866 --> 00:02:47.100
+in this case LSD minus one.
+
+00:02:47.100 --> 00:02:47.666
+So you can see
+
+00:02:47.666 --> 00:02:49.300
+this is a little bit more verbose.
+
+00:02:49.300 --> 00:02:51.200
+It's kind of more difficult to read.
+
+00:02:51.200 --> 00:02:52.166
+So instead in Python,
+
+00:02:52.166 --> 00:02:53.166
+we just do negative one.
+
+00:02:53.166 --> 00:02:54.200
+And that always gives us
+
+00:02:54.200 --> 00:02:56.166
+the last element in the list.
+
+00:02:56.166 --> 00:02:56.900
+Now we'll get into a bunch
+
+00:02:56.900 --> 00:02:58.366
+of other list features in a second.
+
+00:02:58.366 --> 00:02:59.500
+But I want to quickly mention
+
+00:02:59.500 --> 00:03:01.366
+I just released a massive software
+
+00:03:01.366 --> 00:03:02.433
+development course.
+
+00:03:02.433 --> 00:03:03.533
+The goal of this course
+
+00:03:03.533 --> 00:03:05.100
+is that everyone that graduates
+
+00:03:05.100 --> 00:03:06.600
+actually gets a job.
+
+00:03:06.600 --> 00:03:07.833
+The way that we're supporting
+
+00:03:07.833 --> 00:03:08.166
+that is
+
+00:03:08.166 --> 00:03:10.200
+we actually have an employer portal
+
+00:03:10.200 --> 00:03:11.400
+where once you graduate
+
+00:03:11.400 --> 00:03:12.566
+and you go through our proctored
+
+00:03:12.566 --> 00:03:13.400
+final exam
+
+00:03:13.400 --> 00:03:15.266
+and all the projects that we have,
+
+00:03:15.266 --> 00:03:17.500
+you'll show up in that employer database
+
+00:03:17.500 --> 00:03:19.500
+and employers will actually pay us money
+
+00:03:19.500 --> 00:03:20.700
+to interview you
+
+00:03:20.700 --> 00:03:22.166
+because we've already vetted you.
+
+00:03:22.166 --> 00:03:22.666
+You've gone
+
+00:03:22.666 --> 00:03:24.000
+through an intense curriculum,
+
+00:03:24.000 --> 00:03:24.966
+you know, everything
+
+00:03:24.966 --> 00:03:27.000
+to be the best possible junior developer.
+
+00:03:27.000 --> 00:03:28.500
+You can be in both front
+
+00:03:28.500 --> 00:03:30.233
+end, back end and DevOps.
+
+00:03:30.233 --> 00:03:31.766
+Now you can pick the specialization
+
+00:03:31.766 --> 00:03:32.766
+you want to go into
+
+00:03:32.766 --> 00:03:34.166
+and those specializations
+
+00:03:34.166 --> 00:03:36.100
+are taught by industry experts
+
+00:03:36.100 --> 00:03:36.966
+that are not myself.
+
+00:03:36.966 --> 00:03:38.266
+So you have a frontend expert,
+
+00:03:38.266 --> 00:03:40.233
+DevOps expert and back end expert
+
+00:03:40.233 --> 00:03:41.133
+where I teach you
+
+00:03:41.133 --> 00:03:42.566
+all the fundamental skills
+
+00:03:42.566 --> 00:03:43.900
+so that you actually understand
+
+00:03:43.900 --> 00:03:45.600
+what specialization you want to choose.
+
+00:03:45.600 --> 00:03:46.733
+Anyways, you guys can check it out
+
+00:03:46.733 --> 00:03:47.900
+from the link in the description.
+
+00:03:47.900 --> 00:03:49.600
+Now let's get back into our lists.
+
+00:03:49.600 --> 00:03:50.733
+now that we've looked at that, let's
+
+00:03:50.733 --> 00:03:52.500
+see how we can actually add, remove
+
+00:03:52.500 --> 00:03:54.233
+and insert elements from lists
+
+00:03:54.233 --> 00:03:56.100
+if we want to add something to our list.
+
+00:03:56.100 --> 00:03:57.233
+So actually a new element,
+
+00:03:57.233 --> 00:03:59.033
+not replacing an existing element.
+
+00:03:59.033 --> 00:04:01.000
+We can use the dot append method.
+
+00:04:01.000 --> 00:04:02.866
+Now, if I append something like five,
+
+00:04:02.866 --> 00:04:03.533
+this will simply
+
+00:04:03.533 --> 00:04:05.233
+go to the end of the list.
+
+00:04:05.233 --> 00:04:06.866
+So if I run my code here,
+
+00:04:06.866 --> 00:04:07.866
+we should print out the
+
+00:04:07.866 --> 00:04:11.333
+list so we can see it.
+
+00:04:11.400 --> 00:04:13.233
+You will see that we get ABCD
+
+00:04:13.233 --> 00:04:14.233
+and then five.
+
+00:04:14.233 --> 00:04:15.166
+That's how you append.
+
+00:04:15.166 --> 00:04:16.800
+Now what if you want to remove?
+
+00:04:16.800 --> 00:04:18.600
+Well, if we want to remove from our list,
+
+00:04:18.600 --> 00:04:20.300
+we can use this pop function.
+
+00:04:20.300 --> 00:04:21.700
+Now, what this pop function does
+
+00:04:21.700 --> 00:04:23.666
+is actually remove and return.
+
+00:04:23.666 --> 00:04:25.566
+The element at the end of the list in
+
+00:04:25.566 --> 00:04:26.833
+this case is going to be e.
+
+00:04:26.833 --> 00:04:29.500
+So if I print out, remove and list
+
+00:04:29.500 --> 00:04:31.866
+and I clear and run, you see we get EPE
+
+00:04:31.866 --> 00:04:33.033
+and then the rest of the list,
+
+00:04:33.033 --> 00:04:34.400
+except we no longer have E
+
+00:04:34.400 --> 00:04:36.600
+because we popped it or removed it.
+
+00:04:36.600 --> 00:04:37.733
+Now with the pop method,
+
+00:04:37.733 --> 00:04:39.466
+we can actually specify the index
+
+00:04:39.466 --> 00:04:40.833
+at which we want to remove.
+
+00:04:40.833 --> 00:04:42.400
+So let's say we want to remove C,
+
+00:04:42.400 --> 00:04:43.600
+I can put two here,
+
+00:04:43.600 --> 00:04:45.133
+which is the index of C
+
+00:04:45.133 --> 00:04:45.900
+and when I run this
+
+00:04:45.900 --> 00:04:47.500
+now I get A, B, no C,
+
+00:04:47.500 --> 00:04:49.000
+and then D and E and C
+
+00:04:49.000 --> 00:04:50.333
+gets stored in this variable
+
+00:04:50.333 --> 00:04:52.000
+because that's what Pop does.
+
+00:04:52.000 --> 00:04:53.600
+Now let's say we don't actually know
+
+00:04:53.600 --> 00:04:54.933
+the index of the element
+
+00:04:54.933 --> 00:04:56.000
+we want to remove.
+
+00:04:56.000 --> 00:04:57.100
+If that's the case,
+
+00:04:57.100 --> 00:04:58.166
+we can remove the element
+
+00:04:58.166 --> 00:04:59.133
+based on its value
+
+00:04:59.133 --> 00:05:00.866
+by using the remove function.
+
+00:05:00.866 --> 00:05:02.133
+So if I wanted to remove B,
+
+00:05:02.133 --> 00:05:04.766
+I would do list, remove and not end.
+
+00:05:04.766 --> 00:05:06.666
+This is B
+
+00:05:06.733 --> 00:05:07.100
+and if I
+
+00:05:07.100 --> 00:05:10.166
+clear and run, you see we get a c, d, e.
+
+00:05:10.300 --> 00:05:11.133
+Now, an important thing
+
+00:05:11.133 --> 00:05:12.133
+to keep in mind with this
+
+00:05:12.133 --> 00:05:12.833
+method is
+
+00:05:12.833 --> 00:05:13.200
+it removes
+
+00:05:13.200 --> 00:05:15.966
+the first instance of that element.
+
+00:05:15.966 --> 00:05:17.366
+So if I have two B's here,
+
+00:05:17.366 --> 00:05:17.833
+you'll see that
+
+00:05:17.833 --> 00:05:19.233
+we only remove the first B,
+
+00:05:19.233 --> 00:05:20.766
+we don't remove the last one.
+
+00:05:20.766 --> 00:05:22.000
+So you need to run this method
+
+00:05:22.000 --> 00:05:23.066
+multiple times
+
+00:05:23.066 --> 00:05:23.966
+if you want to remove
+
+00:05:23.966 --> 00:05:25.766
+all of the different instances.
+
+00:05:25.766 --> 00:05:26.800
+L So let's see what happens
+
+00:05:26.800 --> 00:05:27.933
+if we try to remove an element
+
+00:05:27.933 --> 00:05:29.566
+that doesn't exist.
+
+00:05:29.566 --> 00:05:30.966
+I go here and run and notice
+
+00:05:30.966 --> 00:05:31.633
+we get an error
+
+00:05:31.633 --> 00:05:33.866
+because that element doesn't exist.
+
+00:05:33.866 --> 00:05:35.000
+So you need to actually know
+
+00:05:35.000 --> 00:05:36.066
+that the element exists
+
+00:05:36.066 --> 00:05:37.033
+before you remove it.
+
+00:05:37.033 --> 00:05:37.500
+I'll show you
+
+00:05:37.500 --> 00:05:39.200
+how you can find that in a second.
+
+00:05:39.200 --> 00:05:39.500
+All right.
+
+00:05:39.500 --> 00:05:40.666
+So a few last methods
+
+00:05:40.666 --> 00:05:42.233
+related to insertion
+
+00:05:42.233 --> 00:05:44.533
+or kind of adding or modifying the list.
+
+00:05:44.533 --> 00:05:46.000
+We have an insert method.
+
+00:05:46.000 --> 00:05:48.066
+This insert method will insert an element
+
+00:05:48.066 --> 00:05:49.966
+at whatever index you specify.
+
+00:05:49.966 --> 00:05:51.433
+So let's say I do index two,
+
+00:05:51.433 --> 00:05:53.166
+which is currently where C is,
+
+00:05:53.166 --> 00:05:55.500
+and I insert some big number.
+
+00:05:55.500 --> 00:05:56.000
+Well, now
+
+00:05:56.000 --> 00:05:58.200
+when I run my code notice, I get a B
+
+00:05:58.200 --> 00:06:00.066
+and then I index to this new element
+
+00:06:00.066 --> 00:06:01.066
+and the rest of the elements
+
+00:06:01.066 --> 00:06:01.966
+get shifted over
+
+00:06:01.966 --> 00:06:03.400
+to the right in the list.
+
+00:06:03.400 --> 00:06:04.466
+That's great.
+
+00:06:04.466 --> 00:06:06.166
+Now, one other thing to show you here.
+
+00:06:06.166 --> 00:06:07.066
+Let's see what happens
+
+00:06:07.066 --> 00:06:08.733
+if I append another list.
+
+00:06:08.733 --> 00:06:09.766
+So maybe I have a list
+
+00:06:09.766 --> 00:06:11.733
+that has the elements. One, two.
+
+00:06:11.733 --> 00:06:12.900
+Very clear in run here.
+
+00:06:12.900 --> 00:06:14.800
+Notice that this actually gets added
+
+00:06:14.800 --> 00:06:16.200
+as its own element.
+
+00:06:16.200 --> 00:06:18.333
+So the last index is specifying
+
+00:06:18.333 --> 00:06:19.466
+this list.
+
+00:06:19.466 --> 00:06:21.133
+This is known as nesting lists.
+
+00:06:21.133 --> 00:06:22.500
+We'll look at that in a second.
+
+00:06:22.500 --> 00:06:23.300
+Sometimes, though,
+
+00:06:23.300 --> 00:06:24.833
+you don't actually want this behavior.
+
+00:06:24.833 --> 00:06:26.700
+You want to take both one and two
+
+00:06:26.700 --> 00:06:27.933
+and you want to put them in the list
+
+00:06:27.933 --> 00:06:29.566
+as individual elements.
+
+00:06:29.566 --> 00:06:30.500
+If that's the case,
+
+00:06:30.500 --> 00:06:32.800
+you can use this extend function.
+
+00:06:32.900 --> 00:06:33.533
+Now, the extend
+
+00:06:33.533 --> 00:06:34.066
+function will
+
+00:06:34.066 --> 00:06:35.200
+take all of the elements
+
+00:06:35.200 --> 00:06:37.266
+in the iterable object that you specify.
+
+00:06:37.266 --> 00:06:38.566
+In this case, it's a list
+
+00:06:38.566 --> 00:06:39.233
+and add them
+
+00:06:39.233 --> 00:06:40.733
+as individual elements in the list.
+
+00:06:40.733 --> 00:06:43.566
+So if I run this notice, we get ABCD
+
+00:06:43.566 --> 00:06:45.333
+B and then one and two,
+
+00:06:45.333 --> 00:06:46.200
+which are the elements
+
+00:06:46.200 --> 00:06:48.233
+that existed inside of this list.
+
+00:06:48.233 --> 00:06:49.300
+Now that we've discussed that,
+
+00:06:49.300 --> 00:06:50.333
+I want to talk about something
+
+00:06:50.333 --> 00:06:51.666
+known as mutability.
+
+00:06:51.666 --> 00:06:52.833
+Now lists are mutable.
+
+00:06:52.833 --> 00:06:54.233
+That means we can modify them
+
+00:06:54.233 --> 00:06:55.633
+once they've been created.
+
+00:06:55.633 --> 00:06:56.833
+Now, this is in contrast
+
+00:06:56.833 --> 00:06:59.266
+to immutable objects like a tuple,
+
+00:06:59.266 --> 00:07:00.833
+some python. We have tuples.
+
+00:07:00.833 --> 00:07:03.333
+These are using regular parentheses.
+
+00:07:03.333 --> 00:07:03.966
+And you'll notice
+
+00:07:03.966 --> 00:07:04.866
+that if I go to my top
+
+00:07:04.866 --> 00:07:05.433
+when I do something
+
+00:07:05.433 --> 00:07:08.433
+like tuple at index zero is equal to 100
+
+00:07:08.600 --> 00:07:09.933
+and I run my code,
+
+00:07:09.933 --> 00:07:11.033
+we actually get an error.
+
+00:07:11.033 --> 00:07:11.666
+It says tuple
+
+00:07:11.666 --> 00:07:13.800
+object does not support item assignment.
+
+00:07:13.800 --> 00:07:15.500
+That's because this is immutable.
+
+00:07:15.500 --> 00:07:18.266
+Once I create it, I cannot modify it.
+
+00:07:18.266 --> 00:07:19.433
+If I want to make a change to this,
+
+00:07:19.433 --> 00:07:21.500
+I need to make a new tuple object
+
+00:07:21.500 --> 00:07:22.866
+that has that change.
+
+00:07:22.866 --> 00:07:24.466
+That's different than lists lists
+
+00:07:24.466 --> 00:07:26.400
+We can actually modify in place,
+
+00:07:26.400 --> 00:07:27.100
+and this gives them
+
+00:07:27.100 --> 00:07:28.500
+some special behavior.
+
+00:07:28.500 --> 00:07:30.500
+So now let's see what happens
+
+00:07:30.500 --> 00:07:32.333
+if I do something like this.
+
+00:07:32.333 --> 00:07:35.333
+LSD two is equal to LSD
+
+00:07:35.400 --> 00:07:37.933
+and we'll say LSD two at index
+
+00:07:37.933 --> 00:07:39.800
+zero is equal to 100
+
+00:07:39.800 --> 00:07:43.033
+and then we'll print both are lists.
+
+00:07:43.133 --> 00:07:44.200
+Now, you'll notice
+
+00:07:44.200 --> 00:07:45.933
+when I clear and run here
+
+00:07:45.933 --> 00:07:48.300
+that we actually get the exact same list,
+
+00:07:48.300 --> 00:07:50.233
+even though we only made the change
+
+00:07:50.233 --> 00:07:51.500
+to list two.
+
+00:07:51.500 --> 00:07:52.733
+And the reason that happens
+
+00:07:52.733 --> 00:07:54.833
+is because this is a mutable object.
+
+00:07:54.833 --> 00:07:56.833
+Whenever you store mutable objects,
+
+00:07:56.833 --> 00:07:57.700
+you're actually storing
+
+00:07:57.700 --> 00:07:58.833
+a reference to them.
+
+00:07:58.833 --> 00:08:00.900
+So when I say LSD is equal to this list,
+
+00:08:00.900 --> 00:08:02.333
+I'm creating a new list
+
+00:08:02.333 --> 00:08:04.133
+and referencing that list
+
+00:08:04.133 --> 00:08:06.233
+that means when I have LSD two
+
+00:08:06.233 --> 00:08:07.633
+is equal to LSD.
+
+00:08:07.633 --> 00:08:09.933
+I'm actually just copying the reference
+
+00:08:09.933 --> 00:08:12.266
+to this list into another variable.
+
+00:08:12.266 --> 00:08:14.400
+So whenever I make a change to LSD,
+
+00:08:14.400 --> 00:08:15.433
+it affects LSD.
+
+00:08:15.433 --> 00:08:17.466
+Two Whenever I make a change to LSD, two,
+
+00:08:17.466 --> 00:08:18.700
+it affects LSD
+
+00:08:18.700 --> 00:08:19.933
+because these are referencing
+
+00:08:19.933 --> 00:08:21.866
+the same underlying list.
+
+00:08:21.866 --> 00:08:23.333
+So you need to keep that in mind
+
+00:08:23.333 --> 00:08:24.600
+if you want to copy a list,
+
+00:08:24.600 --> 00:08:25.600
+you actually need to do that
+
+00:08:25.600 --> 00:08:26.866
+in a special way.
+
+00:08:26.866 --> 00:08:27.533
+What we're doing
+
+00:08:27.533 --> 00:08:28.033
+right here
+
+00:08:28.033 --> 00:08:28.633
+is just creating
+
+00:08:28.633 --> 00:08:29.566
+another reference
+
+00:08:29.566 --> 00:08:31.333
+or something known as an alias
+
+00:08:31.333 --> 00:08:32.666
+to the same list.
+
+00:08:32.666 --> 00:08:33.333
+Now this becomes
+
+00:08:33.333 --> 00:08:34.300
+especially important
+
+00:08:34.300 --> 00:08:35.533
+when you start using lists
+
+00:08:35.533 --> 00:08:37.200
+as function parameters.
+
+00:08:37.200 --> 00:08:37.900
+So for example,
+
+00:08:37.900 --> 00:08:40.266
+let's have a function defined func
+
+00:08:40.266 --> 00:08:43.266
+I taken some LSD and I just say LSD
+
+00:08:43.266 --> 00:08:45.033
+zero is equal to 100.
+
+00:08:45.033 --> 00:08:48.333
+Well, now I can make I don't know, new
+
+00:08:48.400 --> 00:08:49.766
+list here
+
+00:08:49.766 --> 00:08:51.633
+is equal to 1 to 3
+
+00:08:51.633 --> 00:08:53.933
+and I can actually call my function
+
+00:08:53.933 --> 00:08:57.800
+on new LSD and then print my new LSD
+
+00:08:58.033 --> 00:08:59.466
+and you'll see
+
+00:08:59.466 --> 00:09:00.100
+that just like
+
+00:09:00.100 --> 00:09:01.666
+before we actually modify
+
+00:09:01.666 --> 00:09:03.266
+that list in place.
+
+00:09:03.266 --> 00:09:04.133
+That's because, again,
+
+00:09:04.133 --> 00:09:05.600
+when we pass this value
+
+00:09:05.600 --> 00:09:06.900
+here to the parameter,
+
+00:09:06.900 --> 00:09:09.133
+we're storing the reference to this list
+
+00:09:09.133 --> 00:09:10.433
+so we can actually modify
+
+00:09:10.433 --> 00:09:12.600
+a variable outside of the function
+
+00:09:12.600 --> 00:09:14.033
+because it's mutable.
+
+00:09:14.033 --> 00:09:15.433
+Very important to understand,
+
+00:09:15.433 --> 00:09:16.500
+you need to know this
+
+00:09:16.500 --> 00:09:18.933
+to be able to use lists effectively.
+
+00:09:18.933 --> 00:09:19.633
+Okay.
+
+00:09:19.633 --> 00:09:20.300
+So beyond that,
+
+00:09:20.300 --> 00:09:21.866
+we have nesting of lists
+
+00:09:21.866 --> 00:09:23.300
+and we saw this briefly before,
+
+00:09:23.300 --> 00:09:24.000
+but we can store
+
+00:09:24.000 --> 00:09:25.666
+lists inside of other lists.
+
+00:09:25.666 --> 00:09:27.333
+So if I have LSD is equal to a list
+
+00:09:27.333 --> 00:09:27.833
+like this,
+
+00:09:27.833 --> 00:09:29.633
+I can actually store other lists
+
+00:09:29.633 --> 00:09:31.433
+and I can use kind of a double
+
+00:09:31.433 --> 00:09:32.366
+indexing method,
+
+00:09:32.366 --> 00:09:33.066
+which you're going to see here
+
+00:09:33.066 --> 00:09:34.100
+in a second.
+
+00:09:34.100 --> 00:09:35.566
+So let's say I want to access
+
+00:09:35.566 --> 00:09:37.533
+and we should really change this.
+
+00:09:37.533 --> 00:09:38.133
+The value
+
+00:09:38.133 --> 00:09:40.066
+for will to access the value for.
+
+00:09:40.066 --> 00:09:41.800
+I first need to access the list
+
+00:09:41.800 --> 00:09:43.100
+that stores four
+
+00:09:43.100 --> 00:09:43.833
+so I can print
+
+00:09:43.833 --> 00:09:45.400
+list at index one
+
+00:09:45.400 --> 00:09:47.600
+and I'm going to access this second list
+
+00:09:47.600 --> 00:09:49.400
+and you see that we get three four.
+
+00:09:49.400 --> 00:09:50.800
+Now that I have that list,
+
+00:09:50.800 --> 00:09:52.700
+I can index it again
+
+00:09:52.700 --> 00:09:54.700
+and I can grab the second position
+
+00:09:54.700 --> 00:09:56.966
+or the first index of that list,
+
+00:09:56.966 --> 00:09:58.200
+and that will give me the value.
+
+00:09:58.200 --> 00:10:00.400
+For now, this keeps going into infinity.
+
+00:10:00.400 --> 00:10:02.066
+Like if I had another list here
+
+00:10:02.066 --> 00:10:03.500
+right now, when I do one one,
+
+00:10:03.500 --> 00:10:03.900
+you see that
+
+00:10:03.900 --> 00:10:05.266
+I actually get the list for this
+
+00:10:05.266 --> 00:10:06.333
+and I would have to access
+
+00:10:06.333 --> 00:10:08.000
+index zero here
+
+00:10:08.000 --> 00:10:09.700
+to be able to grab the actual value.
+
+00:10:09.700 --> 00:10:11.000
+Four that's nesting.
+
+00:10:11.000 --> 00:10:11.466
+Just quickly,
+
+00:10:11.466 --> 00:10:12.500
+I wanted to show that to you.
+
+00:10:12.500 --> 00:10:13.766
+Now that we've looked at nesting,
+
+00:10:13.766 --> 00:10:15.300
+let's look at the most common issue
+
+00:10:15.300 --> 00:10:16.933
+I see with Python lists.
+
+00:10:16.933 --> 00:10:18.133
+And this is using lists
+
+00:10:18.133 --> 00:10:19.766
+as default parameters.
+
+00:10:19.766 --> 00:10:21.333
+So let's say again, I have my function
+
+00:10:21.333 --> 00:10:22.500
+and I've LSD equal
+
+00:10:22.500 --> 00:10:25.500
+to a default parameter of say, one two.
+
+00:10:25.500 --> 00:10:26.700
+Now maybe what I'll do inside
+
+00:10:26.700 --> 00:10:30.900
+of here is I will just say LSD
+
+00:10:30.966 --> 00:10:32.733
+dot append
+
+00:10:32.733 --> 00:10:35.900
+100 and I will return my list.
+
+00:10:36.133 --> 00:10:37.433
+So this is a simple function.
+
+00:10:37.433 --> 00:10:39.633
+All it does is it just takes some list.
+
+00:10:39.633 --> 00:10:40.933
+It appends 100 to it
+
+00:10:40.933 --> 00:10:42.400
+and then it returns that list.
+
+00:10:42.400 --> 00:10:42.800
+But what it
+
+00:10:42.800 --> 00:10:45.800
+has is a default value for its parameter.
+
+00:10:45.833 --> 00:10:47.466
+That means I can call this function
+
+00:10:47.466 --> 00:10:49.533
+with l passing in my own list
+
+00:10:49.533 --> 00:10:51.266
+and it will use the list right here
+
+00:10:51.266 --> 00:10:53.100
+which has the value. One two.
+
+00:10:53.100 --> 00:10:53.866
+So we're going to say
+
+00:10:53.866 --> 00:10:58.166
+LSD one is equal to funk and LSD two
+
+00:10:58.233 --> 00:11:00.966
+is equal to funk and LSD three
+
+00:11:00.966 --> 00:11:02.266
+is equal to funk.
+
+00:11:02.266 --> 00:11:02.733
+We're just going to
+
+00:11:02.733 --> 00:11:03.933
+print all of these out
+
+00:11:03.933 --> 00:11:05.166
+and take a guess yourself
+
+00:11:05.166 --> 00:11:07.066
+what you think the output is going to be.
+
+00:11:07.066 --> 00:11:08.433
+I've kind of hinted
+
+00:11:08.433 --> 00:11:08.733
+as to
+
+00:11:08.733 --> 00:11:09.466
+what's going to happen,
+
+00:11:09.466 --> 00:11:11.166
+but pause the video, take a guess,
+
+00:11:11.166 --> 00:11:12.766
+and then I'm going to run the code.
+
+00:11:12.766 --> 00:11:15.600
+Okay, So let's run our code here
+
+00:11:15.600 --> 00:11:17.100
+and notice that our lists
+
+00:11:17.100 --> 00:11:19.066
+continue to get larger and larger.
+
+00:11:19.066 --> 00:11:19.633
+And in fact,
+
+00:11:19.633 --> 00:11:21.533
+they're actually the same list.
+
+00:11:21.533 --> 00:11:22.866
+This is a little bit weird.
+
+00:11:22.866 --> 00:11:23.566
+What's happening?
+
+00:11:23.566 --> 00:11:24.600
+Well,
+
+00:11:24.600 --> 00:11:25.566
+what's going on here
+
+00:11:25.566 --> 00:11:27.600
+is we have a default parameter,
+
+00:11:27.600 --> 00:11:29.766
+which is a mutable list.
+
+00:11:29.766 --> 00:11:31.866
+Now that means that when I make a change,
+
+00:11:31.866 --> 00:11:32.933
+so I do list
+
+00:11:32.933 --> 00:11:34.066
+append 100,
+
+00:11:34.066 --> 00:11:34.566
+I'm actually
+
+00:11:34.566 --> 00:11:36.900
+modifying this default parameter.
+
+00:11:36.900 --> 00:11:38.766
+So every time I call function,
+
+00:11:38.766 --> 00:11:41.500
+I'm appending 100 into this list
+
+00:11:41.500 --> 00:11:43.866
+and all of list one, two and three
+
+00:11:43.866 --> 00:11:45.100
+have the same list
+
+00:11:45.100 --> 00:11:45.966
+that they're referencing
+
+00:11:45.966 --> 00:11:46.766
+because I'm returning
+
+00:11:46.766 --> 00:11:48.500
+a reference to this list,
+
+00:11:48.500 --> 00:11:50.100
+which is a mutable object.
+
+00:11:50.100 --> 00:11:51.200
+I know it seems a little bit
+
+00:11:51.200 --> 00:11:52.133
+confusing here,
+
+00:11:52.133 --> 00:11:53.966
+but the kind of moral of the story
+
+00:11:53.966 --> 00:11:55.466
+is don't use a list
+
+00:11:55.466 --> 00:11:56.666
+as a default parameter.
+
+00:11:56.666 --> 00:11:57.100
+In fact,
+
+00:11:57.100 --> 00:11:58.400
+don't use anything mutable
+
+00:11:58.400 --> 00:11:59.933
+as a default parameter
+
+00:11:59.933 --> 00:12:01.300
+unless you're going to be copying it.
+
+00:12:01.300 --> 00:12:02.100
+And even then
+
+00:12:02.100 --> 00:12:03.600
+you probably don't want to do that.
+
+00:12:03.600 --> 00:12:04.933
+So just as a quick demo here,
+
+00:12:04.933 --> 00:12:06.600
+if I pass in my own list
+
+00:12:06.600 --> 00:12:07.900
+now, so I'm passing
+
+00:12:07.900 --> 00:12:11.033
+three distinct lists here and I run,
+
+00:12:11.233 --> 00:12:12.100
+you'll notice that we get
+
+00:12:12.100 --> 00:12:14.633
+what we expect 100 in each list.
+
+00:12:14.633 --> 00:12:15.166
+Okay?
+
+00:12:15.166 --> 00:12:17.266
+Whereas if I do something like A
+
+00:12:17.266 --> 00:12:20.900
+is equal to this, and then I pass a here,
+
+00:12:21.000 --> 00:12:23.600
+okay, so a, a and a,
+
+00:12:23.600 --> 00:12:24.100
+you'll notice
+
+00:12:24.100 --> 00:12:25.600
+that we get the exact same list
+
+00:12:25.600 --> 00:12:26.700
+three times again,
+
+00:12:26.700 --> 00:12:28.033
+because we're appending to a
+
+00:12:28.033 --> 00:12:29.266
+every single time,
+
+00:12:29.266 --> 00:12:31.366
+because this is a mutable object.
+
+00:12:31.366 --> 00:12:32.400
+Now that we've got into that,
+
+00:12:32.400 --> 00:12:33.833
+let's talk about slicing,
+
+00:12:33.833 --> 00:12:34.766
+which is one of my favorite
+
+00:12:34.766 --> 00:12:36.166
+features of lists.
+
+00:12:36.166 --> 00:12:38.366
+Now, a slice is essentially like a
+
+00:12:38.366 --> 00:12:39.600
+for loop in Python,
+
+00:12:39.600 --> 00:12:40.533
+but for iterating
+
+00:12:40.533 --> 00:12:42.866
+or grabbing values out of a list.
+
+00:12:42.866 --> 00:12:44.533
+So if I have my list like one, two,
+
+00:12:44.533 --> 00:12:46.000
+three, four or five indices numbers
+
+00:12:46.000 --> 00:12:46.433
+to keep it
+
+00:12:46.433 --> 00:12:47.600
+nice and simple here,
+
+00:12:47.600 --> 00:12:48.366
+I can actually create
+
+00:12:48.366 --> 00:12:51.566
+a slice of this list so I can say print
+
+00:12:51.633 --> 00:12:52.500
+Ellis team.
+
+00:12:52.500 --> 00:12:54.733
+I can do my square bracket syntax
+
+00:12:54.733 --> 00:12:56.033
+and now I have the ability
+
+00:12:56.033 --> 00:12:58.166
+to use up to two colons.
+
+00:12:58.166 --> 00:12:59.200
+Now bear with me here.
+
+00:12:59.200 --> 00:12:59.933
+There's a few things
+
+00:12:59.933 --> 00:13:01.200
+that you need to remember.
+
+00:13:01.200 --> 00:13:03.166
+So first of all, I can use one colon.
+
+00:13:03.166 --> 00:13:05.100
+Now when I use one colon right here,
+
+00:13:05.100 --> 00:13:06.966
+what this actually does is create
+
+00:13:06.966 --> 00:13:08.400
+a copy of the list
+
+00:13:08.400 --> 00:13:09.033
+we're going to look at that
+
+00:13:09.033 --> 00:13:10.666
+in one second, I promise.
+
+00:13:10.666 --> 00:13:12.600
+Now, the first kind of thing
+
+00:13:12.600 --> 00:13:13.833
+to the left of the colon.
+
+00:13:13.833 --> 00:13:15.266
+So the left of the colon here,
+
+00:13:15.266 --> 00:13:16.566
+when you don't put anything
+
+00:13:16.566 --> 00:13:18.566
+there that indicates to start
+
+00:13:18.566 --> 00:13:20.333
+right at the beginning of the list,
+
+00:13:20.333 --> 00:13:21.366
+when you don't put anything
+
+00:13:21.366 --> 00:13:22.733
+to the right of the colon,
+
+00:13:22.733 --> 00:13:23.500
+that indicates
+
+00:13:23.500 --> 00:13:25.433
+to go to the end of the list,
+
+00:13:25.433 --> 00:13:27.300
+including the last element.
+
+00:13:27.300 --> 00:13:28.700
+So if I just print out the list here
+
+00:13:28.700 --> 00:13:29.533
+with one colon,
+
+00:13:29.533 --> 00:13:31.033
+this is actually valid syntax.
+
+00:13:31.033 --> 00:13:31.433
+And you see
+
+00:13:31.433 --> 00:13:33.166
+we just get the exact same list.
+
+00:13:33.166 --> 00:13:33.766
+Now though,
+
+00:13:33.766 --> 00:13:35.700
+if I do something like one colon,
+
+00:13:35.700 --> 00:13:37.133
+what I'm actually specifying is
+
+00:13:37.133 --> 00:13:40.133
+I want to start at index one
+
+00:13:40.166 --> 00:13:42.300
+and I want to go to the end of the list,
+
+00:13:42.300 --> 00:13:44.566
+including the last value when I run it.
+
+00:13:44.566 --> 00:13:45.433
+Now notice
+
+00:13:45.433 --> 00:13:47.800
+I get from two to the end of the list.
+
+00:13:47.800 --> 00:13:49.433
+Now let's do one colon
+
+00:13:49.433 --> 00:13:51.433
+and then index six.
+
+00:13:51.433 --> 00:13:52.966
+What I'm doing now is specifying
+
+00:13:52.966 --> 00:13:54.533
+I want to start it index one
+
+00:13:54.533 --> 00:13:55.900
+and I want to go up to
+
+00:13:55.900 --> 00:13:58.900
+but not include index six.
+
+00:13:58.900 --> 00:14:01.133
+Now index six is seven.
+
+00:14:01.133 --> 00:14:02.700
+So that means I'm going to have a list
+
+00:14:02.700 --> 00:14:04.300
+which is 2 to 6,
+
+00:14:04.300 --> 00:14:06.000
+and that's exactly what I get.
+
+00:14:06.000 --> 00:14:06.266
+Okay,
+
+00:14:06.266 --> 00:14:08.433
+so you have your start colon
+
+00:14:08.433 --> 00:14:09.466
+and then your stop.
+
+00:14:09.466 --> 00:14:10.700
+If you leave them empty,
+
+00:14:10.700 --> 00:14:11.466
+the start is going to be
+
+00:14:11.466 --> 00:14:12.300
+the beginning of the list
+
+00:14:12.300 --> 00:14:12.966
+and the end is going
+
+00:14:12.966 --> 00:14:14.400
+to be the end of the list,
+
+00:14:14.400 --> 00:14:15.600
+and it's going to include that
+
+00:14:15.600 --> 00:14:16.900
+last value.
+
+00:14:16.900 --> 00:14:18.266
+Now, where things get a bit
+
+00:14:18.266 --> 00:14:19.100
+more complicated
+
+00:14:19.100 --> 00:14:20.833
+is when we have two colons
+
+00:14:20.833 --> 00:14:21.966
+and when we have two colons,
+
+00:14:21.966 --> 00:14:25.166
+we actually go start stop step.
+
+00:14:25.233 --> 00:14:27.966
+So I can do something like one six here
+
+00:14:27.966 --> 00:14:30.166
+and if I leave the step empty by default,
+
+00:14:30.166 --> 00:14:31.533
+I'm going to have a step of one.
+
+00:14:31.533 --> 00:14:33.333
+So we get the exact same list.
+
+00:14:33.333 --> 00:14:34.933
+But if I put a two here,
+
+00:14:34.933 --> 00:14:36.133
+I'm actually specifying
+
+00:14:36.133 --> 00:14:37.833
+that I want to step over
+
+00:14:37.833 --> 00:14:39.500
+every second element.
+
+00:14:39.500 --> 00:14:41.233
+So now when I run my code,
+
+00:14:41.233 --> 00:14:42.833
+I get two, four, six,
+
+00:14:42.833 --> 00:14:44.866
+so I skip every second element.
+
+00:14:44.866 --> 00:14:46.200
+This is similar to a for loop
+
+00:14:46.200 --> 00:14:46.866
+where you set
+
+00:14:46.866 --> 00:14:48.233
+I equal to some value,
+
+00:14:48.233 --> 00:14:49.533
+you go up to some value
+
+00:14:49.533 --> 00:14:51.566
+and then you increment by some step.
+
+00:14:51.566 --> 00:14:52.133
+In this case,
+
+00:14:52.133 --> 00:14:53.966
+the step we're using is two.
+
+00:14:53.966 --> 00:14:55.833
+Now slices can get pretty complicated
+
+00:14:55.833 --> 00:14:56.833
+and you can actually use
+
+00:14:56.833 --> 00:14:59.333
+negative values in slices.
+
+00:14:59.333 --> 00:15:00.733
+So let's say I have a colon
+
+00:15:00.733 --> 00:15:02.300
+and then I do negative one.
+
+00:15:02.300 --> 00:15:02.900
+Well, what do you think
+
+00:15:02.900 --> 00:15:03.866
+we're going to get here?
+
+00:15:03.866 --> 00:15:04.966
+Let's run this
+
+00:15:04.966 --> 00:15:05.466
+and notice
+
+00:15:05.466 --> 00:15:07.233
+that we actually get the entire list
+
+00:15:07.233 --> 00:15:08.700
+minus the last element,
+
+00:15:08.700 --> 00:15:10.366
+because we go up to everything
+
+00:15:10.366 --> 00:15:12.133
+but the last element.
+
+00:15:12.133 --> 00:15:13.833
+Whereas if I put a negative
+
+00:15:13.833 --> 00:15:15.300
+one here as my start,
+
+00:15:15.300 --> 00:15:15.733
+you'll see that
+
+00:15:15.733 --> 00:15:17.466
+we just get the last element
+
+00:15:17.466 --> 00:15:19.700
+in this list of the slice.
+
+00:15:19.700 --> 00:15:21.733
+Now one little trick you can use is
+
+00:15:21.733 --> 00:15:24.066
+you can actually step negative.
+
+00:15:24.066 --> 00:15:26.200
+So I can do colon, colon negative one.
+
+00:15:26.200 --> 00:15:27.866
+Now, this is actually a very fast way
+
+00:15:27.866 --> 00:15:29.933
+to reverse a list in Python.
+
+00:15:29.933 --> 00:15:30.800
+When I do this,
+
+00:15:30.800 --> 00:15:31.766
+you actually see that
+
+00:15:31.766 --> 00:15:34.033
+we get the entire list reversed.
+
+00:15:34.033 --> 00:15:35.833
+Okay, We're starting at the beginning,
+
+00:15:35.833 --> 00:15:36.733
+going to the end,
+
+00:15:36.733 --> 00:15:38.366
+but stepping negative ones
+
+00:15:38.366 --> 00:15:39.600
+or stepping backwards,
+
+00:15:39.600 --> 00:15:40.933
+which kind of goes circularly.
+
+00:15:40.933 --> 00:15:41.900
+I won't really explain
+
+00:15:41.900 --> 00:15:42.966
+this much more in depth,
+
+00:15:42.966 --> 00:15:44.333
+but negative or colon.
+
+00:15:44.333 --> 00:15:44.866
+Colon negative
+
+00:15:44.866 --> 00:15:47.000
+one will reverse the list for you. Okay.
+
+00:15:47.000 --> 00:15:48.000
+You can do all kinds of
+
+00:15:48.000 --> 00:15:49.866
+interesting things here with a slice.
+
+00:15:49.866 --> 00:15:51.233
+Now, just as a last example here
+
+00:15:51.233 --> 00:15:52.066
+with our slice,
+
+00:15:52.066 --> 00:15:53.433
+we can actually modify
+
+00:15:53.433 --> 00:15:55.000
+segments of a slice.
+
+00:15:55.000 --> 00:15:55.600
+So let's say
+
+00:15:55.600 --> 00:15:58.600
+I do something like two colon for
+
+00:15:58.600 --> 00:16:00.933
+I can actually make this equal to a list
+
+00:16:00.933 --> 00:16:03.033
+with just one element inside
+
+00:16:03.033 --> 00:16:03.966
+when I run my code.
+
+00:16:03.966 --> 00:16:07.200
+Now, if I print out
+
+00:16:07.266 --> 00:16:09.000
+LCT you'll see that
+
+00:16:09.000 --> 00:16:10.733
+what I've done here is of inserted
+
+00:16:10.733 --> 00:16:14.333
+one in position of the slice from 2 to 4.
+
+00:16:14.533 --> 00:16:15.733
+Now to make this more clear,
+
+00:16:15.733 --> 00:16:16.800
+we can do like a thousand.
+
+00:16:16.800 --> 00:16:18.133
+A thousand
+
+00:16:18.133 --> 00:16:18.833
+and you'll see that
+
+00:16:18.833 --> 00:16:20.033
+I've essentially replaced
+
+00:16:20.033 --> 00:16:21.666
+what happens in this slice
+
+00:16:21.666 --> 00:16:23.133
+with whatever I put here.
+
+00:16:23.133 --> 00:16:23.900
+So now we're going to go through
+
+00:16:23.900 --> 00:16:25.166
+some of the more useful methods
+
+00:16:25.166 --> 00:16:26.833
+that you can use on lists.
+
+00:16:26.833 --> 00:16:27.866
+First of all, I want to show you
+
+00:16:27.866 --> 00:16:28.600
+how you can determine
+
+00:16:28.600 --> 00:16:30.566
+if something is inside of a list
+
+00:16:30.566 --> 00:16:31.433
+to do that
+
+00:16:31.433 --> 00:16:33.466
+we can say contains is equal to
+
+00:16:33.466 --> 00:16:35.900
+and then something like two in Ellis T
+
+00:16:35.900 --> 00:16:37.933
+Now this in operator simply tells us
+
+00:16:37.933 --> 00:16:39.466
+if whatever the value is on the left hand
+
+00:16:39.466 --> 00:16:41.833
+side is contained inside of the iterable.
+
+00:16:41.833 --> 00:16:43.400
+In this case, it's a list.
+
+00:16:43.400 --> 00:16:46.066
+So if I print contains,
+
+00:16:46.166 --> 00:16:46.833
+you can see that we
+
+00:16:46.833 --> 00:16:47.900
+get true, indicating
+
+00:16:47.900 --> 00:16:49.866
+the two does indeed exist.
+
+00:16:49.866 --> 00:16:51.533
+Now let's say that you don't know
+
+00:16:51.533 --> 00:16:53.100
+what elements are inside of the list
+
+00:16:53.100 --> 00:16:54.100
+and you first want to check
+
+00:16:54.100 --> 00:16:55.933
+if something existence of the list
+
+00:16:55.933 --> 00:16:57.400
+I found to it exists.
+
+00:16:57.400 --> 00:16:58.733
+Maybe now what I want
+
+00:16:58.733 --> 00:17:00.233
+is the index of value
+
+00:17:00.233 --> 00:17:01.633
+to well, what I can do
+
+00:17:01.633 --> 00:17:03.233
+now is actually grab the index.
+
+00:17:03.233 --> 00:17:04.766
+By using the index method,
+
+00:17:04.766 --> 00:17:08.633
+I can say team dot index and then two
+
+00:17:08.700 --> 00:17:12.000
+and now I can bring contains and index
+
+00:17:12.066 --> 00:17:12.800
+and it will tell me
+
+00:17:12.800 --> 00:17:15.300
+the index of element two, which is one.
+
+00:17:15.300 --> 00:17:17.100
+Now a few other useful methods we can use
+
+00:17:17.100 --> 00:17:18.266
+are the count method.
+
+00:17:18.266 --> 00:17:19.000
+So for example,
+
+00:17:19.000 --> 00:17:19.733
+I can go here and say
+
+00:17:19.733 --> 00:17:23.766
+print LSD accounts and I can count three
+
+00:17:23.833 --> 00:17:25.566
+and if I clear and run,
+
+00:17:25.566 --> 00:17:26.100
+you see that
+
+00:17:26.100 --> 00:17:26.500
+it tells me
+
+00:17:26.500 --> 00:17:28.100
+we have two instances of three
+
+00:17:28.100 --> 00:17:30.300
+inside of the list now as well as those.
+
+00:17:30.300 --> 00:17:31.533
+We can also sort our list
+
+00:17:31.533 --> 00:17:33.300
+so I can say LSD don't sort.
+
+00:17:33.300 --> 00:17:34.366
+Now what this is going to do
+
+00:17:34.366 --> 00:17:36.400
+is perform an in place sort.
+
+00:17:36.400 --> 00:17:37.466
+That means it's actually going
+
+00:17:37.466 --> 00:17:39.266
+to modify the list, change
+
+00:17:39.266 --> 00:17:40.066
+all of the elements
+
+00:17:40.066 --> 00:17:41.866
+to be in the correct position.
+
+00:17:41.866 --> 00:17:43.400
+So this is kind of interesting.
+
+00:17:43.400 --> 00:17:46.300
+If I print out list dot sort,
+
+00:17:46.300 --> 00:17:48.466
+you'll actually see that we get none.
+
+00:17:48.466 --> 00:17:49.466
+The reason we get none
+
+00:17:49.466 --> 00:17:50.366
+is because this method
+
+00:17:50.366 --> 00:17:51.700
+doesn't return anything.
+
+00:17:51.700 --> 00:17:53.933
+It actually just source the list for us.
+
+00:17:53.933 --> 00:17:55.866
+So if I do another print statement here
+
+00:17:55.866 --> 00:17:58.366
+and now I print LSD.
+
+00:17:58.366 --> 00:17:59.700
+Okay, you can see that.
+
+00:17:59.700 --> 00:18:01.866
+Now we get the list in ascending order.
+
+00:18:01.866 --> 00:18:03.400
+Now we can also specify if we want to
+
+00:18:03.400 --> 00:18:04.333
+in descending order,
+
+00:18:04.333 --> 00:18:05.200
+I believe we can say
+
+00:18:05.200 --> 00:18:07.500
+descend is equal to true.
+
+00:18:07.500 --> 00:18:09.533
+I think that's the correct.
+
+00:18:09.533 --> 00:18:12.366
+no, sorry. It's reverse equals true
+
+00:18:12.433 --> 00:18:13.033
+vertical.
+
+00:18:13.033 --> 00:18:13.500
+True.
+
+00:18:13.500 --> 00:18:14.400
+If we do that now, it's
+
+00:18:14.400 --> 00:18:15.933
+going to sort it in descending order.
+
+00:18:15.933 --> 00:18:16.900
+So we get from eight
+
+00:18:16.900 --> 00:18:18.300
+all the way down to one.
+
+00:18:18.300 --> 00:18:19.466
+So that is sorting
+
+00:18:19.466 --> 00:18:20.366
+now as well as sorting.
+
+00:18:20.366 --> 00:18:21.900
+We can actually reverse a list.
+
+00:18:21.900 --> 00:18:22.500
+So same thing
+
+00:18:22.500 --> 00:18:24.433
+here, I can say list dot reverse.
+
+00:18:24.433 --> 00:18:24.933
+Now again,
+
+00:18:24.933 --> 00:18:26.366
+this is going to happen in place,
+
+00:18:26.366 --> 00:18:28.133
+so notice it returns none
+
+00:18:28.133 --> 00:18:30.300
+and it reverses the list for us now
+
+00:18:30.300 --> 00:18:31.266
+as well as those sorts
+
+00:18:31.266 --> 00:18:32.600
+and reverse methods.
+
+00:18:32.600 --> 00:18:33.666
+We also have functions
+
+00:18:33.666 --> 00:18:35.200
+that will do this that actually return
+
+00:18:35.200 --> 00:18:36.833
+new objects to us.
+
+00:18:36.833 --> 00:18:37.400
+So what I can do
+
+00:18:37.400 --> 00:18:40.400
+is actually wrap my list here in sorted
+
+00:18:40.433 --> 00:18:42.333
+and now if I prints out sorted
+
+00:18:42.333 --> 00:18:46.033
+and then I print my list like this,
+
+00:18:46.133 --> 00:18:46.633
+you'll notice
+
+00:18:46.633 --> 00:18:48.000
+it actually doesn't modify
+
+00:18:48.000 --> 00:18:48.900
+my original list.
+
+00:18:48.900 --> 00:18:50.166
+It returns a new list,
+
+00:18:50.166 --> 00:18:52.133
+which is the sorted version of this list.
+
+00:18:52.133 --> 00:18:54.033
+So very interesting to see that
+
+00:18:54.033 --> 00:18:56.900
+now as well as sorted, we have reversed
+
+00:18:56.900 --> 00:18:57.433
+same thing.
+
+00:18:57.433 --> 00:18:58.766
+It will return a new instance
+
+00:18:58.766 --> 00:19:01.233
+that is not modified the list in place.
+
+00:19:01.233 --> 00:19:02.100
+Now this is giving us
+
+00:19:02.100 --> 00:19:03.533
+something known as an iterator.
+
+00:19:03.533 --> 00:19:04.700
+If we wanted to convert this
+
+00:19:04.700 --> 00:19:05.700
+to an actual list,
+
+00:19:05.700 --> 00:19:07.666
+we would just wrap this in the list.
+
+00:19:07.666 --> 00:19:09.866
+Not going to dive into that too much.
+
+00:19:09.866 --> 00:19:10.500
+Okay.
+
+00:19:10.500 --> 00:19:11.766
+Beyond that, I did promise you
+
+00:19:11.766 --> 00:19:12.300
+I was going to show you
+
+00:19:12.300 --> 00:19:13.533
+how to make a copy of a list,
+
+00:19:13.533 --> 00:19:14.466
+a few ways to do this,
+
+00:19:14.466 --> 00:19:15.300
+but the most common
+
+00:19:15.300 --> 00:19:17.333
+is to use the slice operation.
+
+00:19:17.333 --> 00:19:19.233
+So I can say list two is equal to LST
+
+00:19:19.233 --> 00:19:21.400
+and then simply do a single colon.
+
+00:19:21.400 --> 00:19:22.766
+Now, if I do list
+
+00:19:22.766 --> 00:19:25.333
+at zero is equal to a big number,
+
+00:19:25.333 --> 00:19:28.766
+and then I print my list and my list to,
+
+00:19:28.833 --> 00:19:29.400
+you'll see that
+
+00:19:29.400 --> 00:19:30.633
+these are now different lists
+
+00:19:30.633 --> 00:19:31.733
+because we made a copy
+
+00:19:31.733 --> 00:19:32.633
+of the original list.
+
+00:19:32.633 --> 00:19:34.333
+So notice we've only modified lists.
+
+00:19:34.333 --> 00:19:36.266
+Two, we did not modify list one
+
+00:19:36.266 --> 00:19:38.100
+because we made a copy here
+
+00:19:38.100 --> 00:19:40.000
+using this slice. Operator.
+
+00:19:40.000 --> 00:19:40.300
+All right,
+
+00:19:40.300 --> 00:19:41.433
+So one more cool thing to show
+
+00:19:41.433 --> 00:19:42.066
+you here is something
+
+00:19:42.066 --> 00:19:43.433
+known as the zip function.
+
+00:19:43.433 --> 00:19:43.866
+Let's say
+
+00:19:43.866 --> 00:19:46.000
+we have two lists here, names and ages,
+
+00:19:46.000 --> 00:19:46.633
+and they actually have
+
+00:19:46.633 --> 00:19:48.000
+corresponding indices, right?
+
+00:19:48.000 --> 00:19:49.533
+So the ages at Index zero
+
+00:19:49.533 --> 00:19:51.900
+correspond with a name at index zero.
+
+00:19:51.900 --> 00:19:53.500
+Well, we can actually use a function
+
+00:19:53.500 --> 00:19:54.433
+called zip.
+
+00:19:54.433 --> 00:19:56.100
+So I can zip these together.
+
+00:19:56.100 --> 00:19:57.133
+I'll just say zipped
+
+00:19:57.133 --> 00:19:59.000
+if I can fix my cap locks here.
+
+00:19:59.000 --> 00:19:59.833
+What is going on?
+
+00:19:59.833 --> 00:20:03.400
+Caps zipped is equal to zip,
+
+00:20:03.500 --> 00:20:06.166
+and then I can pass my names and my ages
+
+00:20:06.166 --> 00:20:07.566
+and it'll actually create tuples
+
+00:20:07.566 --> 00:20:09.966
+for us of all of the matching indices.
+
+00:20:09.966 --> 00:20:11.433
+So if I go ahead and print
+
+00:20:11.433 --> 00:20:13.833
+the list of my zipped
+
+00:20:13.833 --> 00:20:16.200
+and I go here and run this,
+
+00:20:16.200 --> 00:20:17.566
+you see that we actually get tuples
+
+00:20:17.566 --> 00:20:19.033
+with the correspond indices.
+
+00:20:19.033 --> 00:20:19.733
+You can do this
+
+00:20:19.733 --> 00:20:21.533
+with as many different lists as you want.
+
+00:20:21.533 --> 00:20:22.600
+So we can zip three, four
+
+00:20:22.600 --> 00:20:24.100
+or five 100 lists.
+
+00:20:24.100 --> 00:20:25.800
+And the reason why I put a list here
+
+00:20:25.800 --> 00:20:27.200
+is because this actually returns
+
+00:20:27.200 --> 00:20:28.533
+an iterator for us.
+
+00:20:28.533 --> 00:20:29.100
+An iterator
+
+00:20:29.100 --> 00:20:30.666
+is something that we can loop over,
+
+00:20:30.666 --> 00:20:32.366
+but if we want to get all of the values
+
+00:20:32.366 --> 00:20:33.833
+in just a human readable form,
+
+00:20:33.833 --> 00:20:35.333
+we do have to convert it to a list.
+
+00:20:35.333 --> 00:20:36.500
+So now that we've looked at zip
+
+00:20:36.500 --> 00:20:38.000
+last really cool thing to show
+
+00:20:38.000 --> 00:20:39.700
+you here is list comprehension.
+
+00:20:39.700 --> 00:20:41.400
+So you've probably seen this before,
+
+00:20:41.400 --> 00:20:43.066
+but this is one of the coolest parts
+
+00:20:43.066 --> 00:20:43.833
+of Python.
+
+00:20:43.833 --> 00:20:45.133
+Well, what I can do is write a list
+
+00:20:45.133 --> 00:20:46.966
+and I can actually populate the list
+
+00:20:46.966 --> 00:20:47.900
+by using something
+
+00:20:47.900 --> 00:20:49.366
+known as a comprehension.
+
+00:20:49.366 --> 00:20:51.666
+So I can do something like X for X
+
+00:20:51.666 --> 00:20:53.466
+in range ten.
+
+00:20:53.466 --> 00:20:57.400
+Now, if I go here and print out my list,
+
+00:20:57.466 --> 00:21:00.400
+you will see that when I run this
+
+00:21:00.400 --> 00:21:02.500
+I get zero through nine.
+
+00:21:02.500 --> 00:21:04.300
+Now I can even make this a bit cooler.
+
+00:21:04.300 --> 00:21:06.600
+I can say x for x in range ten.
+
+00:21:06.600 --> 00:21:10.933
+If x mod two is equal to zero.
+
+00:21:11.066 --> 00:21:12.433
+Now this is just going to give me
+
+00:21:12.433 --> 00:21:14.666
+all the even numbers, including zero.
+
+00:21:14.666 --> 00:21:15.833
+I could go much further
+
+00:21:15.833 --> 00:21:16.666
+into how to do this.
+
+00:21:16.666 --> 00:21:17.733
+You can also have list
+
+00:21:17.733 --> 00:21:19.966
+comprehension of list comprehension.
+
+00:21:19.966 --> 00:21:20.933
+So I can actually just
+
+00:21:20.933 --> 00:21:22.600
+make this like that
+
+00:21:22.600 --> 00:21:24.866
+and this isn't going to be that useful.
+
+00:21:24.866 --> 00:21:26.500
+Let's take this.
+
+00:21:26.500 --> 00:21:29.133
+So X for x there
+
+00:21:29.133 --> 00:21:32.800
+for underscore in range five.
+
+00:21:32.900 --> 00:21:35.000
+Now it's a bit difficult to read this.
+
+00:21:35.000 --> 00:21:36.033
+Let's zoom out a little bit
+
+00:21:36.033 --> 00:21:37.333
+what this is going to do for us
+
+00:21:37.333 --> 00:21:39.233
+is give us a list of even numbers
+
+00:21:39.233 --> 00:21:39.966
+five times.
+
+00:21:39.966 --> 00:21:41.200
+So now when I run this, you can see
+
+00:21:41.200 --> 00:21:43.566
+we get a nested list comprehension.
+
+00:21:43.566 --> 00:21:45.000
+The syntax is like a half here.
+
+00:21:45.000 --> 00:21:46.500
+You kind of can pause and parse it
+
+00:21:46.500 --> 00:21:47.733
+and see exactly how it works.
+
+00:21:47.733 --> 00:21:49.833
+But I don't want to make the video too
+
+00:21:49.833 --> 00:21:50.700
+long here and continue
+
+00:21:50.700 --> 00:21:51.633
+going on about this anyway.
+
+00:21:51.633 --> 00:21:52.466
+It's really cool.
+
+00:21:52.466 --> 00:21:53.600
+You can do list comprehension
+
+00:21:53.600 --> 00:21:54.600
+and you can write all kinds
+
+00:21:54.600 --> 00:21:56.500
+of wild syntax in Python.
+
+00:21:56.500 --> 00:21:57.300
+If you want to learn more,
+
+00:21:57.300 --> 00:21:58.566
+you should subscribe to my channel
+
+00:21:58.566 --> 00:22:01.200
+because I have a lot more python content.
+
+00:22:01.200 --> 00:22:02.633
+And it was. I'm going to wrap it up here.
+
+00:22:02.633 --> 00:22:04.600
+You guys enjoyed Leave it like subscribe
+
+00:22:04.600 --> 00:22:06.400
+and I'll see you in the next one.
+

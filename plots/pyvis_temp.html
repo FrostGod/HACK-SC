@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 60%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "1", "label": "Putnam", "shape": "dot", "size": 10, "title": "The Putnam exam, a notoriously difficult mathematics competition"}, {"color": "#97c2fc", "id": "2", "label": "question", "shape": "dot", "size": 10, "title": "One of the 12 questions on the Putnam exam"}, {"color": "#97c2fc", "id": "3", "label": "score", "shape": "dot", "size": 10, "title": "A numerical score given to each question on the Putnam exam"}, {"color": "#97c2fc", "id": "6", "label": "problem", "shape": "dot", "size": 10, "title": "A difficult math problem on the Putnam exam"}, {"color": "#97c2fc", "id": "4", "label": "student", "shape": "dot", "size": 10, "title": "A participant in the Putnam exam who is already interested in math"}, {"color": "#97c2fc", "id": "5", "label": "test", "shape": "dot", "size": 10, "title": "The Putnam exam"}, {"color": "#97c2fc", "id": "7", "label": "solution", "shape": "dot", "size": 10, "title": "An elegant solution to a problem on the Putnam exam"}, {"color": "#97c2fc", "id": "8", "label": "video", "shape": "dot", "size": 10, "title": "A video discussing the problem and its solution"}, {"color": "#97c2fc", "id": "9", "label": "tetrahedron", "shape": "dot", "size": 10, "title": "A geometric figure with four triangular faces"}, {"color": "#97c2fc", "id": "10", "label": "point", "shape": "dot", "size": 10, "title": "A location in space"}, {"color": "#97c2fc", "id": "11", "label": "sphere", "shape": "dot", "size": 10, "title": "A perfectly round geometrical object in three-dimensional space"}, {"color": "#97c2fc", "id": "16", "label": "triangle", "shape": "dot", "size": 10, "title": "A polygon with three edges and three vertices"}, {"color": "#97c2fc", "id": "17", "label": "circle", "shape": "dot", "size": 10, "title": "A perfectly round geometrical object in two-dimensional space"}, {"color": "#97c2fc", "id": "18", "label": "surface", "shape": "dot", "size": 10, "title": "The outer or topmost layer of an object"}, {"color": "#97c2fc", "id": "13", "label": "arc", "shape": "dot", "size": 10, "title": "A portion of the circumference of a circle"}, {"color": "#97c2fc", "id": "14", "label": "proportion", "shape": "dot", "size": 10, "title": "A comparative relation between two quantities"}, {"color": "#97c2fc", "id": "15", "label": "plane", "shape": "dot", "size": 10, "title": "A flat surface in three-dimensional space"}, {"color": "#97c2fc", "id": "12", "label": "dimension", "shape": "dot", "size": 10, "title": "The number of coordinates needed to determine the position of a point"}, {"color": "#97c2fc", "id": "21", "label": "21", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "22", "label": "22", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "1", "label": "has", "to": "2", "width": 1}, {"from": "2", "label": "scored on", "to": "3", "width": 1}, {"from": "2", "label": "tend to get harder as you go from 1 to 6", "to": "6", "width": 1}, {"from": "4", "label": "already pretty into", "to": "5", "width": 1}, {"from": "6", "label": "has elegant solutions", "to": "7", "width": 1}, {"from": "7", "label": "make the video more about the problem-solving", "to": "8", "width": 1}, {"from": "9", "label": "choose 4 points on", "to": "10", "width": 1}, {"from": "9", "label": "contain the center", "to": "11", "width": 1}, {"from": "9", "label": "contains", "to": "16", "width": 1}, {"from": "9", "label": "generalizes to the 3d case", "to": "17", "width": 1}, {"from": "9", "label": "think to try a surface under your belt", "to": "18", "width": 1}, {"from": "10", "label": "lands in", "to": "13", "width": 1}, {"from": "10", "label": "choose three random points on", "to": "11", "width": 1}, {"from": "10", "label": "chosen, there are four possible outcomes", "to": "14", "width": 1}, {"from": "11", "label": "divide the sphere into", "to": "15", "width": 1}, {"from": "12", "label": "math students spend much of their time", "to": "17", "width": 1}, {"from": "13", "label": "opposite side of the center from", "to": "14", "width": 1}, {"from": "14", "label": "think about", "to": "15", "width": 1}, {"from": "15", "label": "style of argument generalizes to other cases", "to": "18", "width": 1}, {"from": "16", "label": "inspect the construct", "to": "17", "width": 1}, {"from": "17", "label": "math students spend much of their time", "to": "21", "width": 1}, {"from": "17", "label": "ask simpler versions of the question", "to": "22", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 10}}, "edges": {"font": {"size": 7}, "arrows": {"to": {"enabled": true}}}, "physics": {"enabled": true, "repulsion": {"centralGravity": 0.0, "springLength": 100, "springConstant": 0.05, "nodeDistance": 100}}, "interaction": {"hover": true}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
