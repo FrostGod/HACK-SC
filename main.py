@@ -197,7 +197,7 @@ def header():
                     query_str += '\n'
 
                 # integrating with kg
-                kg.generate_knowledge_graph(query_str)
+                # kg.generate_knowledge_graph(query_str)
 
                 if video_data:
                     st.session_state.video_data = video_data
