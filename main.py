@@ -28,16 +28,19 @@ def exist_subtitles(info_dict):
 
 def extract_subtitles_from_vtt(vtt_file_str):
     vtt = webvtt.read(vtt_file_str)
-    starts = []
-    ends = []
-    caption_texts = []
     out = []
 
+    counter = 10
     for caption in vtt:
-        starts.append(caption.start)
-        ends.append(caption.end)
-        caption_text = caption.text.strip().replace("\n", " ")
-        caption_texts.append(caption_text)
+        caption_text = caption.text.strip().split("\n")[0]
+        if out and out[-1]["caption_text"] in caption_text:
+            if counter:
+                print(f"{caption_text=}")
+                counter -= 1
+            # replace the previous caption with the current one
+            out[-1]["caption_text"] = caption_text
+            out[-1]["end"] = caption.end
+            continue
         out.append(
             {"start": caption.start, "end": caption.end, "caption_text": caption_text}
         )
@@ -77,38 +80,87 @@ def extract_video_data(url: str):
             os.remove(vtt_file_str)
 
 
-def video(video_data: dict):
-    subtitles = video_data["subtitles"]
-    title = video_data["title"]
-    col1, col2= st.columns([1, 1])
-    with col1:
-        st.header(title)
-        st.write(video_data["description"])
-        df = pd.DataFrame(subtitles, columns=["start", "end", "caption_text"])
-        st.dataframe(df, hide_index=True)
-    with col2:
-        st.video(video_data["url"])
-
 MOCK_VIDEO_DATA = {
     "url": "https://www.youtube.com/watch?v=OkmNXy7er84",
 }
 MOCK_DATA = [
-    ["Introduction to the Putnam competition", 0, 13, "An introduction to the Putnam competition, a challenging math competition for undergraduate students with 12 questions."],
-    ["The Challenging Problem", 72, 96, "The main problem discussed in the video is introduced - 'If you choose four random points on a sphere and consider the tetrahedron with these points as its vertices, what is the probability that the center of the sphere is inside that tetrahedron?'"],
-    ["Two-Dimensional Case", 114, 135, "Simplifying the problem by considering a two-dimensional case where three random points are chosen on a circle."],
-    ["Probability in Two Dimensions", 179, 224, "Explaining the probability calculation in two dimensions, where the average probability that the triangle contains the center of the circle is determined."],
-    ["Extension to Three Dimensions", 266, 283, "Extending the problem to three dimensions and explaining how to calculate the probability for the tetrahedron containing the center of the sphere."],
-    ["Elegant Insight", 345, 383, "Discussing the elegant insight of reframing the problem and thinking about choosing lines and points instead of random points."],
-    ["General Problem-Solving Approach", 391, 435, "Providing a general problem-solving approach by breaking down complex problems into simpler cases and looking for key insights."],
-    ["Sponsor Message - Brilliant.org", 575, 621, "Promoting Brilliant.org as a platform for enhancing problem-solving skills and presenting a probability puzzle related to cheating students."],
-    ["Conclusion", 668, 671, "Concluding remarks and closing the video."]
+    [
+        "Introduction to the Putnam competition",
+        0,
+        13,
+        "An introduction to the Putnam competition, a challenging math competition for undergraduate students with 12 questions.",
+    ],
+    [
+        "The Challenging Problem",
+        72,
+        96,
+        "The main problem discussed in the video is introduced - 'If you choose four random points on a sphere and consider the tetrahedron with these points as its vertices, what is the probability that the center of the sphere is inside that tetrahedron?'",
+    ],
+    [
+        "Two-Dimensional Case",
+        114,
+        135,
+        "Simplifying the problem by considering a two-dimensional case where three random points are chosen on a circle.",
+    ],
+    [
+        "Probability in Two Dimensions",
+        179,
+        224,
+        "Explaining the probability calculation in two dimensions, where the average probability that the triangle contains the center of the circle is determined.",
+    ],
+    [
+        "Extension to Three Dimensions",
+        266,
+        283,
+        "Extending the problem to three dimensions and explaining how to calculate the probability for the tetrahedron containing the center of the sphere.",
+    ],
+    [
+        "Elegant Insight",
+        345,
+        383,
+        "Discussing the elegant insight of reframing the problem and thinking about choosing lines and points instead of random points.",
+    ],
+    [
+        "General Problem-Solving Approach",
+        391,
+        435,
+        "Providing a general problem-solving approach by breaking down complex problems into simpler cases and looking for key insights.",
+    ],
+    [
+        "Sponsor Message - Brilliant.org",
+        575,
+        621,
+        "Promoting Brilliant.org as a platform for enhancing problem-solving skills and presenting a probability puzzle related to cheating students.",
+    ],
+    ["Conclusion", 668, 671, "Concluding remarks and closing the video."],
 ]
 
-MOCK_COLUMNS = ['Title', 'Start', 'End', 'Text']
+MOCK_COLUMNS = ["Title", "Start", "End", "Text"]
 MOCK_DF = pd.DataFrame(MOCK_DATA, columns=MOCK_COLUMNS)
+
 
 def extract_video_id(url: str):
     return url.split("=")[-1]
+
+
+def video(video_data: dict):
+    title = video_data["title"]
+    st.video(video_data["url"])
+    st.subheader(title)
+    with st.expander("Description"):
+        st.write(video_data["description"])
+
+
+def subtitles(video_data: dict):
+    subtitles = video_data["subtitles"]
+    df = pd.DataFrame(subtitles, columns=["start", "end", "caption_text"])
+    st.dataframe(
+        df,
+        hide_index=True,
+        use_container_width=True,
+        column_config={"caption_text": {"width": 600}},
+    )
+
 
 def notes(notes_df: pd.DataFrame, video_data: dict):
     for i, row in notes_df.iterrows():
@@ -116,11 +168,12 @@ def notes(notes_df: pd.DataFrame, video_data: dict):
             st.divider()
         col1, col2 = st.columns([2, 1])
         with col1:
-            st.subheader(row['Title'])
-            st.write(row['Text'])
+            st.subheader(row["Title"])
+            st.write(row["Text"])
         with col2:
             video_id = extract_video_id(video_data["url"])
-            st.video(video_data["url"], start_time=row['Start'])
+            st.video(video_data["url"], start_time=row["Start"])
+
 
 def header():
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -133,20 +186,27 @@ def header():
             placeholder="https://www.youtube.com/watch?v=OkmNXy7er84",
         )
         if st.button("Generate!"):
-            video_data = extract_video_data(url)
-            if video_data:
-                st.session_state.video_data = video_data
+            with st.spinner("Generating notes..."):
+                video_data = extract_video_data(url)
+                if video_data:
+                    st.session_state.video_data = video_data
+
 
 def body():
     if st.session_state.video_data:
-        tab1, tab2, tab3 = st.tabs(["Video", "Notes", "Mindmap"])
         video_data = st.session_state.video_data
-        with tab1:
+        col1, col2 = st.columns([1, 2])
+        with col1:
             video(video_data)
-        with tab2:
-            notes(MOCK_DF, MOCK_VIDEO_DATA)
-        with tab3:
-            st.write("Mindmap")
+        with col2:
+            tab1, tab2, tab3 = st.tabs(["Transcript", "Notes", "Mindmap"])
+            with tab1:
+                subtitles(video_data)
+            with tab2:
+                notes(MOCK_DF, MOCK_VIDEO_DATA)
+            with tab3:
+                st.write("Mindmap")
+
 
 def streamlit_app():
     st.set_page_config(layout="wide")
