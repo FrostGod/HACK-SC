@@ -1,8 +1,10 @@
 from fastapi import FastAPI
+import streamlit as st
 import os
 import yt_dlp
 import webvtt
 from yt_dlp import YoutubeDL
+import pandas as pd
 
 app = FastAPI()
 
@@ -39,17 +41,19 @@ def extract_subtitles_from_vtt(vtt_file_str):
     starts = []
     ends = []
     caption_texts = []
+    out = []
 
     for caption in vtt:
         starts.append(caption.start)
         ends.append(caption.end)
         caption_text = caption.text.strip().replace("\n", " ")
         caption_texts.append(caption_text)
-    return {
-        "starts": starts,
-        "ends": ends,
-        "caption_texts": caption_texts,
-    }
+        out.append({
+            "start": caption.start,
+            "end": caption.end,
+            "caption_text": caption_text
+        })
+    return out
 
 
 def extract_subtitles(url: str):
@@ -69,8 +73,14 @@ def extract_subtitles(url: str):
         subtitle_dict = extract_subtitles_from_vtt(vtt_file_str)
         return subtitle_dict
     finally:
-        os.remove(vtt_file_str)
+        if os.path.exists(tmp_file_str):
+            os.remove(tmp_file_str)
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    title = st.text_input("Enter the youtube video url")
+    if st.button("Get Subtitles"):
+        subtitle_dict = extract_subtitles(title)
+        df = pd.DataFrame(subtitle_dict, columns=["start", "end", "caption_text"])
+        st.dataframe(df)
+        st.video(title)
+
