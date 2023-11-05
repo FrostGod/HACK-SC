@@ -350,7 +350,7 @@ def main():
         '''
     }
 
-    transcriptions = pd.read_csv('temp.tsv', sep = '\t')
+    transcriptions = pd.read_csv('testingData/temp.tsv', sep = '\t')
 
     summarize(transcriptions, metadata)
 
