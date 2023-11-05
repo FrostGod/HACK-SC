@@ -1,0 +1,171 @@
+start	end	text
+0	5720	Do you guys know about the Putnam?
+5720	8760	It's a math competition for undergraduate students.
+8760	12760	It's a six hour long test that just has 12 questions broken up into two different three
+12760	13760	hour sessions.
+13760	17960	And each one of those questions is scored 1-10, so the highest possible score would
+17960	19760	be 120.
+19760	23800	And yet, despite the fact that the only students taking this thing each year are those who
+23800	29160	clearly are already pretty interested in math, the median score tends to be around 1-2.
+29160	31480	So it's a hard test.
+31480	35880	And on each one of those sections of six questions, the problems tend to get harder as you go
+35880	40240	from one to six, although of course difficulty is in the eye of the beholder.
+40240	44120	But the thing about those fives and sixes is that even though they're positioned as
+44120	48680	the hardest problems on a famously hard test, quite often these are the ones with the most
+48680	50600	elegant solutions available.
+50600	56200	Some subtle shift in perspective that transforms it from very challenging to doable.
+56200	59400	Here I'm going to share with you one problem that came up as the sixth question on one
+59400	60840	of these tests a while back.
+60840	64280	And those of you who follow the channel, you know that rather than just jumping straight
+64280	68240	to the solution, which in this case would be surprisingly short, when possible I like
+68240	72880	to take the time to walk you through how you might have stumbled across the solution yourself,
+72880	74480	where the insight comes from.
+74480	78640	That is, make a video more about the problem solving process than about the problem used
+78640	80360	to exemplify it.
+80360	81880	So anyway, here's the question.
+81880	86880	If you choose four random points on a sphere and consider the tetrahedron with these points
+86880	93560	as its vertices, what is the probability that the center of the sphere is inside that tetrahedron?
+93560	97640	Go ahead, take a moment and kind of digest this question.
+97640	101320	You might start thinking about which of these tetrahedra contain the sphere's center,
+101320	105640	which ones don't, how you might systematically distinguish the two.
+105640	108640	And how do you even approach a problem like this, right?
+108640	110040	Where do you even start?
+111040	114800	Well, it's usually a good idea to think about simpler cases, so let's knock things down
+114800	120240	to two dimensions, where you'll choose three random points on a circle, and it's always
+120240	124480	helpful to name things, so let's call these guys P1, P2, and P3.
+124480	129280	The question is, what's the probability that the triangle formed by these points contains
+129280	131040	the center of the circle?
+134720	139120	I think you'll agree it's way easier to visualize now, but it's still a hard question.
+139120	142600	So again, you ask, is there a way to simplify what's going on?
+142600	145720	Get ourselves to some kind of foothold that we can build up from.
+145720	150560	Well, maybe you imagine fixing P1 and P2 in place, and only letting that third point
+150560	151560	vary.
+151560	154760	And when you do this, and you play around with it in your mind, you might notice that
+154760	159440	there's a special region, a certain arc, where when P3 is in that arc, the triangle
+159440	162000	contains the center, otherwise not.
+162000	167240	Specifically, if you draw lines from P1 and P2 through the center, these lines divide
+167240	172280	up the circle into four different arcs, and if P3 happens to be in the one on the opposite
+172280	177760	side as P1 and P2, the triangle has the center, if it's in any of the other arcs, though,
+177760	178760	no luck.
+178760	184760	We're assuming here that all of the points of the circle are equally likely.
+184760	188160	So what is the probability that P3 lands in that arc?
+188160	193400	It's the length of that arc divided by the full circumference of the circle, the proportion
+193400	195960	of the circle that this arc makes up.
+195960	197720	So what is that proportion?
+197720	199880	Obviously that depends on where you put the first two points.
+199880	204240	I mean, if they're 90 degrees apart from each other, then the relevant arc is one-quarter
+204240	205640	of the circle.
+205640	208840	But if those two points were farther apart, that proportion would be something closer
+208840	213960	to a half, and if they were really close together, that proportion gets closer to zero.
+213960	215960	So think about this for a moment.
+215960	220800	P1 and P2 are chosen randomly, with every point on the circle being equally likely.
+220800	226480	So what is the average size of this relevant arc?
+226480	231800	Maybe imagine fixing P1 in place, and just considering all the places that P2 might be.
+231800	236680	All of the possible angles between these two lines, every angle from 0 degrees up to 180
+236680	238920	degrees, is equally likely.
+238920	245400	So every proportion between 0 and 0.5 is equally likely, and that means that the average proportion
+245400	248280	is 0.25.
+248280	253240	So if the average size of this arc is a quarter of the full circle, the average probability
+253240	258080	that the third point lands in it is a quarter, and that means that the overall probability
+258080	266800	that our triangle contains the center is a quarter.
+266800	269840	But can we extend this into the three-dimensional case?
+269840	274480	If you imagine three out of those four points just being fixed in place, which points of
+274480	279200	the sphere can the fourth one be on, so that the tetrahedron that they form, contain the
+279200	281840	center of the sphere?
+281840	285200	Just like before, let's go ahead and draw some lines from each of those fixed three
+285200	289840	points through the center of the sphere, and here it's also helpful if we draw some planes
+289840	293280	that are determined by any pair of these lines.
+293280	296960	Now what these planes do, you might notice, is divide the sphere into eight different
+296960	301320	sections, each of which is a sort of spherical triangle.
+301480	306480	And our tetrahedron is only going to contain the center of the sphere if the fourth point
+306480	311560	is in the spherical triangle on the opposite side as the first three.
+311560	316360	Now unlike the 2D case, it's pretty difficult to think about the average size of this section
+316360	321400	as we let the initial three points vary.
+321400	324800	Those of you with some multivariable calculus under your belt might think let's just try
+324800	329080	a surface integral, and by all means pull out some paper and give it a try, but it's
+329080	330080	not easy.
+330080	333480	And of course it should be difficult, I mean this is the sixth problem on a Putnam, what
+333480	335760	do you expect?
+335760	339360	And what do you even do with that?
+339360	343240	Well one thing you can do is back up to the two dimensional case and contemplate if there
+343240	346920	is a different way to think about the same answer that we got.
+346920	351280	That answer, one fourth, looks suspiciously clean, and it raises the question of what
+351280	353800	that four represents.
+353800	357080	One of the main reasons I wanted to make a video about this particular problem is that
+357080	361900	what's about to happen carries with it a broader lesson for mathematical problem solving.
+361900	366040	Think about those two lines that we drew for P1 and P2 through the origin.
+366040	370160	They made the problem a lot easier to think about, and in general, whenever you've added
+370160	374960	something to the problem setup that makes it conceptually easier, see if you can reframe
+374960	378960	the entire question in terms of those things that you just added.
+378960	385120	In this case, rather than thinking about choosing three points randomly, start by saying choose
+385120	388540	two random lines that pass through the circle center.
+388540	392080	For each line, there's two possible points that it could correspond to, so just flip
+392080	396520	a coin for each one to choose which of the endpoints is going to be P1, and likewise
+396520	399560	for the other, which endpoint is going to be P2.
+399560	403360	Choosing a random line and flipping a coin like this is the same thing as choosing a
+403360	407680	random point on the circle, it just feels a little bit convoluted at first.
+407680	411360	But the reason for thinking about the random process this way is that things are actually
+411360	412960	about to become easier.
+413520	418160	We'll still think about that third point P3 as just being a random point on the circle,
+418160	423680	but imagine that it was chosen before you do the two coin flips, because you see, once
+423680	428200	the two lines and that third point are set in stone, there's only four possibilities
+428200	433840	for where P1 and P2 might end up, based on those coin flips, each one being equally likely.
+433840	439560	But one and only one of those four outcomes leaves P1 and P2 on the opposite side of the
+439560	444000	circle as P3, with the triangle that they form containing the center.
+444000	448520	So no matter where those two lines end up and where that P3 ends up, it's always a
+448520	453320	one-fourth chance that the coin flips leave us with a triangle containing the center.
+455720	457120	Now that's very subtle.
+457120	461600	Just by reframing how we think about the random process for choosing points, the answer one
+461600	465440	quarter popped out in a very different way from how it did before.
+465440	471200	And importantly, this style of argument generalizes seamlessly up into three dimensions.
+471200	476520	Again, instead of starting off by picking four random points, imagine choosing three random
+476520	483480	lines through the center of the sphere, and then some random point for P4.
+483480	487120	That first line passes through the sphere at two points, so flip a coin to decide which
+487120	489520	of those two points is going to be P1.
+489520	495280	Likewise, for each of the other lines, flip a coin to decide where P2 and P3 end up.
+495280	499840	Now there's eight equally likely outcomes of those coin flips, but one and only one
+499840	506440	of them is going to place P1, P2, and P3 on the opposite side of the center as P4.
+506440	511800	So one and only one of these eight equally likely outcomes gives us a tetrahedron that
+511800	513920	contains the center.
+513920	520880	Again, it's kind of subtle how that pops out to us, but isn't that elegant?
+520880	524640	This is a valid solution to the problem, but admittedly the way that I've stated it so
+524640	527480	far rests on some visual intuition.
+527480	530600	If you're curious about how you might write it up in a way that doesn't rely on visual
+530600	534320	intuition, I've left a link in the description to one such write-up in the language of linear
+534320	536440	algebra if you're curious.
+536440	541280	And this is pretty common in math, where having the key insight and understanding is one thing,
+541280	546000	but having the relevant background to articulate that understanding more formally is almost
+546000	550280	a separate muscle entirely, one that undergraduate math students kind of spend most of their
+550280	552280	time building up.
+552280	557480	But the main takeaway here is not the solution itself, but how you might find that key insight
+557480	560320	if it was put in front of you and you were just left to solve it.
+560320	564280	Namely, just keep asking simpler versions of the question until you can get some kind
+564280	565520	of foothold.
+565520	570560	And then when you do, if there's any kind of added construct that proves to be useful,
+570560	575760	see if you can reframe the whole question around that new construct.
+575760	579240	To close things off here, I've got another probability puzzle, one that comes from this
+579240	581520	video sponsor, Brilliant.org.
+581520	585120	Suppose that you have eight students sitting in a circle taking the puttnam.
+585120	589360	It's a hard test, so each student tries to cheat off of his neighbor, choosing randomly
+589360	591680	which neighbor to cheat from.
+591680	596960	Now circle all of the students that don't have somebody cheating off of their test.
+596960	600240	What is the expected number of such circled students?
+600240	603440	It's an interesting question, right?
+603440	607120	Brilliant.org is a site where you can practice your problem-solving abilities with questions
+607120	611080	like this and many, many more, and that really is the best way to learn.
+611080	614640	You're going to find countless interesting questions curated in a pretty thoughtful way
+614640	618160	so that you really do come away better at problem-solving.
+618160	621880	If you want more probability, they have a really good course on probability, but they've
+621880	625080	got all sorts of other math and science as well, so you're almost certainly going to
+625080	626760	find something that interests you.
+626760	627760	Me?
+627760	632920	I've been a fan for a while, and if you go to Brilliant.org slash 3B1B, it lets them know
+632920	638700	that you came from here, and the first 256 of you to visit that link can get 20% off their
+638700	642320	premium membership, which is the one I use if you want to upgrade.
+642320	646800	Also, if you're just itching to see a solution to this puzzle, which, by the way, uses a
+646800	651160	certain tactic and probability that's useful in a lot of other circumstances, I also left
+651160	653720	a link in the description that just jumps you straight to the solution.
+668720	669720	Thank you.
+669720	670720	Bye.
+670720	671720	Bye.
+671720	671740	Bye.
