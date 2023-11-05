@@ -38,8 +38,30 @@ Learn.ai can Help you take
 
 
 ## 🎈 Usage <a name="usage"></a>
-Installation:
+
+Note: set OPENAI_API_KEY environment variable
+
+```
+Installation and Usage:
 - pip install -r requirements.txt
 - streamlit run main.py
+```
 
 provide any url to get summary, mind map, Q&A etc.
+
+Enter the youtube URL
+
+![Alt text](<Screenshot 2023-11-05 at 12.52.17 PM.png>)
+
+
+Will get the summary of the  entire Video
+
+![Alt text](<Screenshot 2023-11-05 at 12.52.46 PM.png>)
+
+Now Notes cotains summarised video form of the entire Video
+
+![Alt text](<Screenshot 2023-11-05 at 12.52.53 PM.png>)
+
+This is the mind map of the entire video, Which can be used to quickly reference things about the content in the video
+
+![Alt text](<Screenshot 2023-11-05 at 12.53.05 PM.png>)
