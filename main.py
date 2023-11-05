@@ -48,15 +48,13 @@ def extract_subtitles_from_vtt(vtt_file_str):
         ends.append(caption.end)
         caption_text = caption.text.strip().replace("\n", " ")
         caption_texts.append(caption_text)
-        out.append({
-            "start": caption.start,
-            "end": caption.end,
-            "caption_text": caption_text
-        })
+        out.append(
+            {"start": caption.start, "end": caption.end, "caption_text": caption_text}
+        )
     return out
 
 
-def extract_subtitles(url: str):
+def extract_video_data(url: str):
     tmp_file_str = "tmp"
     ydl_opts = {
         "writesubtitles": True,
@@ -66,21 +64,50 @@ def extract_subtitles(url: str):
     }
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            if not exist_subtitles(get_video_metadata(ydl, url)):
+            video_metadata = get_video_metadata(ydl, url)
+            if not exist_subtitles(video_metadata):
                 raise Exception("No subtitles found")
             ydl.download([url])
+        video_title = video_metadata["title"]
+        video_description = video_metadata["description"]
         vtt_file_str = tmp_file_str + ".en.vtt"
         subtitle_dict = extract_subtitles_from_vtt(vtt_file_str)
-        return subtitle_dict
+        return {
+            "url": url,
+            "title": video_title,
+            "description": video_description,
+            "subtitles": subtitle_dict,
+        }
     finally:
-        if os.path.exists(tmp_file_str):
-            os.remove(tmp_file_str)
+        if os.path.exists(vtt_file_str):
+            os.remove(vtt_file_str)
+
+
+def draw_subtitles(subtitle_dict):
+    subtitles = subtitle_dict["subtitles"]
+    title = subtitle_dict["title"]
+    st.write(title)
+    if st.toggle("Show Description"):
+        st.write(subtitle_dict["description"])
+    df = pd.DataFrame(subtitles, columns=["start", "end", "caption_text"])
+    st.dataframe(df)
+    st.video(subtitle_dict["url"])
+
+
+def streamlit_app():
+    st.title("Generate Notes from Youtube Videos")
+    if "video_data" not in st.session_state:
+        st.session_state.video_data = {}
+    url = st.text_input(
+        "Enter the youtube video url",
+        placeholder="https://www.youtube.com/watch?v=OkmNXy7er84",
+    )
+    if st.button("Generate!"):
+        st.session_state.video_data = extract_video_data(url)
+    if st.session_state.video_data:
+        subtitle_dict = st.session_state.data
+        draw_subtitles(subtitle_dict)
+
 
 if __name__ == "__main__":
-    title = st.text_input("Enter the youtube video url")
-    if st.button("Get Subtitles"):
-        subtitle_dict = extract_subtitles(title)
-        df = pd.DataFrame(subtitle_dict, columns=["start", "end", "caption_text"])
-        st.dataframe(df)
-        st.video(title)
-
+    streamlit_app()
