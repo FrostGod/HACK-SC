@@ -26,23 +26,45 @@ def exist_subtitles(info_dict):
     return subtitles or automatic_captions
 
 
+def remove_overlap(before_str, after_str):
+    if not before_str:
+        return after_str
+    if after_str in before_str:
+        return ""
+    for i in range(len(before_str)):
+        if before_str[i:] == after_str[: len(before_str) - i]:
+            return after_str[len(before_str) - i :]
+    return after_str
+
+
+def get_vtt_file_str(tmp_file_str):
+    matches = []
+    for file in os.listdir():
+        if file.startswith(tmp_file_str) and file.endswith(".vtt"):
+            matches.append(file)
+    if len(matches) == 0:
+        return ""
+    return matches[0]
+
+
 def extract_subtitles_from_vtt(vtt_file_str):
     vtt = webvtt.read(vtt_file_str)
     out = []
 
-    counter = 10
+    running_caption = ""
     for caption in vtt:
-        caption_text = caption.text.strip().split("\n")[0]
-        if out and out[-1]["caption_text"] in caption_text:
-            if counter:
-                print(f"{caption_text=}")
-                counter -= 1
-            # replace the previous caption with the current one
-            out[-1]["caption_text"] = caption_text
-            out[-1]["end"] = caption.end
+        caption_text = caption.text.strip().replace("\n", " ")
+        caption_text = remove_overlap(running_caption, caption_text)
+        if not caption_text:
             continue
+        running_caption += caption_text
+        running_caption = running_caption.strip()
         out.append(
-            {"start": caption.start, "end": caption.end, "caption_text": caption_text}
+            {
+                "start": caption.start,
+                "end": caption.end,
+                "caption_text": caption_text,
+            }
         )
     return out
 
@@ -60,11 +82,12 @@ def extract_video_data(url: str):
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             video_metadata = get_video_metadata(ydl, url)
             if not exist_subtitles(video_metadata):
-                raise Exception("No subtitles found")
+                st.error("No subtitles found")
+                return {}
             ydl.download([url])
         video_title = video_metadata["title"]
         video_description = video_metadata["description"]
-        vtt_file_str = tmp_file_str + ".en.vtt"
+        vtt_file_str = get_vtt_file_str(tmp_file_str)
         subtitle_dict = extract_subtitles_from_vtt(vtt_file_str)
         return {
             "url": url,
@@ -179,8 +202,6 @@ def header():
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.title("Generate Notes from Youtube Videos")
-        if "video_data" not in st.session_state:
-            st.session_state.video_data = {}
         url = st.text_input(
             "Enter the youtube video url",
             placeholder="https://www.youtube.com/watch?v=OkmNXy7er84",
@@ -210,6 +231,8 @@ def body():
 
 def streamlit_app():
     st.set_page_config(layout="wide")
+    if "video_data" not in st.session_state:
+        st.session_state.video_data = {}
     header()
     body()
 
