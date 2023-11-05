@@ -71,20 +71,23 @@ def extract_video_data(url: str):
         }
     except DownloadError:
         st.error("Invalid Youtube URL")
+        return {}
     finally:
         if os.path.exists(vtt_file_str):
             os.remove(vtt_file_str)
 
 
-def draw_subtitles(video_data: dict):
+def video(video_data: dict):
     subtitles = video_data["subtitles"]
     title = video_data["title"]
-    st.write(title)
-    if st.toggle("Show Description"):
+    col1, col2= st.columns([1, 1])
+    with col1:
+        st.header(title)
         st.write(video_data["description"])
-    df = pd.DataFrame(subtitles, columns=["start", "end", "caption_text"])
-    st.dataframe(df)
-    st.video(video_data["url"])
+        df = pd.DataFrame(subtitles, columns=["start", "end", "caption_text"])
+        st.dataframe(df, hide_index=True)
+    with col2:
+        st.video(video_data["url"])
 
 MOCK_VIDEO_DATA = {
     "url": "https://www.youtube.com/watch?v=OkmNXy7er84",
@@ -107,7 +110,7 @@ MOCK_DF = pd.DataFrame(MOCK_DATA, columns=MOCK_COLUMNS)
 def extract_video_id(url: str):
     return url.split("=")[-1]
 
-def draw_notes(notes_df: pd.DataFrame, video_data: dict):
+def notes(notes_df: pd.DataFrame, video_data: dict):
     for i, row in notes_df.iterrows():
         if i != 0:
             st.divider()
@@ -130,16 +133,25 @@ def header():
             placeholder="https://www.youtube.com/watch?v=OkmNXy7er84",
         )
         if st.button("Generate!"):
-            st.session_state.video_data = extract_video_data(url)
+            video_data = extract_video_data(url)
+            if video_data:
+                st.session_state.video_data = video_data
+
+def body():
+    if st.session_state.video_data:
+        tab1, tab2, tab3 = st.tabs(["Video", "Notes", "Mindmap"])
+        video_data = st.session_state.video_data
+        with tab1:
+            video(video_data)
+        with tab2:
+            notes(MOCK_DF, MOCK_VIDEO_DATA)
+        with tab3:
+            st.write("Mindmap")
 
 def streamlit_app():
     st.set_page_config(layout="wide")
     header()
-    if st.session_state.video_data:
-        video_data = st.session_state.video_data
-        # draw_subtitles(video_data)
-        print(video_data)
-        draw_notes(MOCK_DF, MOCK_VIDEO_DATA)
+    body()
 
 
 if __name__ == "__main__":
